@@ -77,7 +77,7 @@ namespace Project2
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(310, 9);
+            this.label1.Location = new System.Drawing.Point(317, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 20);
             this.label1.TabIndex = 0;
@@ -87,7 +87,7 @@ namespace Project2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(310, 116);
+            this.label2.Location = new System.Drawing.Point(317, 116);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 20);
             this.label2.TabIndex = 1;
@@ -96,22 +96,24 @@ namespace Project2
             // hitButton
             // 
             this.hitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hitButton.Location = new System.Drawing.Point(372, 235);
+            this.hitButton.Location = new System.Drawing.Point(361, 235);
             this.hitButton.Name = "hitButton";
             this.hitButton.Size = new System.Drawing.Size(80, 35);
             this.hitButton.TabIndex = 2;
             this.hitButton.Text = "Hit";
             this.hitButton.UseVisualStyleBackColor = true;
+            this.hitButton.Click += new System.EventHandler(this.hitButton_Click);
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(203, 235);
+            this.button2.Location = new System.Drawing.Point(214, 235);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(91, 34);
+            this.button2.Size = new System.Drawing.Size(80, 35);
             this.button2.TabIndex = 3;
             this.button2.Text = "Stand";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // resetButton
             // 
@@ -126,12 +128,13 @@ namespace Project2
             // playButton
             // 
             this.playButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.playButton.Location = new System.Drawing.Point(361, 341);
+            this.playButton.Location = new System.Drawing.Point(361, 348);
             this.playButton.Name = "playButton";
             this.playButton.Size = new System.Drawing.Size(91, 34);
             this.playButton.TabIndex = 5;
             this.playButton.Text = "Play";
             this.playButton.UseVisualStyleBackColor = true;
+            this.playButton.Click += new System.EventHandler(this.playButton_Click);
             // 
             // label3
             // 
@@ -270,7 +273,7 @@ namespace Project2
             this.dealerVal.Location = new System.Drawing.Point(13, 32);
             this.dealerVal.MinimumSize = new System.Drawing.Size(20, 55);
             this.dealerVal.Name = "dealerVal";
-            this.dealerVal.Size = new System.Drawing.Size(108, 55);
+            this.dealerVal.Size = new System.Drawing.Size(108, 29);
             this.dealerVal.TabIndex = 23;
             // 
             // playerVal
@@ -278,14 +281,14 @@ namespace Project2
             this.playerVal.Location = new System.Drawing.Point(13, 126);
             this.playerVal.MinimumSize = new System.Drawing.Size(20, 55);
             this.playerVal.Name = "playerVal";
-            this.playerVal.Size = new System.Drawing.Size(108, 55);
+            this.playerVal.Size = new System.Drawing.Size(108, 29);
             this.playerVal.TabIndex = 24;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(548, 260);
+            this.label7.Location = new System.Drawing.Point(574, 259);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(55, 20);
             this.label7.TabIndex = 25;
@@ -293,7 +296,7 @@ namespace Project2
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(655, 249);
+            this.textBox1.Location = new System.Drawing.Point(647, 249);
             this.textBox1.MinimumSize = new System.Drawing.Size(20, 45);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(108, 45);
