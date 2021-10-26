@@ -1,12 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Project2
 {
-    class aDeckofCards
+    public class aDeckofCards
     {
+        private readonly List<aCard> deck = new List<aCard>();
+
+        public aDeckofCards()
+        {
+            for (int i = 0; i < 52; i++)
+            {
+                aCard.ValueType value = aCard.calcValue((i % 13) + 1);
+                aCard.FaceType face = aCard.calcFace((i % 4) + 1);
+
+                deck.Add(new aCard(value, face, null));
+            }
+        }
     }
 }

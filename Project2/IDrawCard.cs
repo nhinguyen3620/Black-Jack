@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Project2
+﻿namespace Project2
 {
-    interface IDrawCard
+    public interface IDrawCard
     {
+        aCard Draw();
     }
 }
