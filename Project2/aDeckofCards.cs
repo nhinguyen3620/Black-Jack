@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Project2
 {
-    public class aDeckofCards : IDrawCard
+    public class aDeckofCards
     {
-        private List<aCard> deck = new List<aCard>();
+        private readonly List<aCard> deck = new List<aCard>();
 
         public aDeckofCards()
         {
@@ -16,18 +15,6 @@ namespace Project2
 
                 deck.Add(new aCard(value, face, null));
             }
-        }
-
-        public aCard Draw()
-        {
-            Random r = new Random();
-
-            int val = r.Next(0, deck.Count);
-
-            aCard drawnCard = deck[val];
-            deck.RemoveAt(val);
-
-            return drawnCard;
         }
     }
 }
