@@ -32,7 +32,7 @@ namespace Project2
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.hitButton = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.standButton = new System.Windows.Forms.Button();
             this.resetButton = new System.Windows.Forms.Button();
             this.playButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -103,16 +103,18 @@ namespace Project2
             this.hitButton.TabIndex = 2;
             this.hitButton.Text = "Hit";
             this.hitButton.UseVisualStyleBackColor = true;
+            this.hitButton.Click += new System.EventHandler(this.hitButton_Click);
             // 
-            // button2
+            // standButton
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(301, 252);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(91, 34);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Stand";
-            this.button2.UseVisualStyleBackColor = true;
+            this.standButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.standButton.Location = new System.Drawing.Point(301, 252);
+            this.standButton.Name = "standButton";
+            this.standButton.Size = new System.Drawing.Size(91, 34);
+            this.standButton.TabIndex = 3;
+            this.standButton.Text = "Stand";
+            this.standButton.UseVisualStyleBackColor = true;
+            this.standButton.Click += new System.EventHandler(this.standButton_Click);
             // 
             // resetButton
             // 
@@ -136,6 +138,7 @@ namespace Project2
             this.playButton.TabIndex = 5;
             this.playButton.Text = "Play";
             this.playButton.UseVisualStyleBackColor = false;
+            this.playButton.Click += new System.EventHandler(this.playButton_Click);
             // 
             // label3
             // 
@@ -275,7 +278,7 @@ namespace Project2
             this.dealerVal.Location = new System.Drawing.Point(13, 32);
             this.dealerVal.MinimumSize = new System.Drawing.Size(20, 55);
             this.dealerVal.Name = "dealerVal";
-            this.dealerVal.Size = new System.Drawing.Size(108, 55);
+            this.dealerVal.Size = new System.Drawing.Size(108, 29);
             this.dealerVal.TabIndex = 23;
             // 
             // playerVal
@@ -283,7 +286,7 @@ namespace Project2
             this.playerVal.Location = new System.Drawing.Point(13, 126);
             this.playerVal.MinimumSize = new System.Drawing.Size(20, 55);
             this.playerVal.Name = "playerVal";
-            this.playerVal.Size = new System.Drawing.Size(108, 55);
+            this.playerVal.Size = new System.Drawing.Size(108, 29);
             this.playerVal.TabIndex = 24;
             // 
             // result
@@ -291,7 +294,7 @@ namespace Project2
             this.result.Location = new System.Drawing.Point(353, 343);
             this.result.MinimumSize = new System.Drawing.Size(20, 60);
             this.result.Name = "result";
-            this.result.Size = new System.Drawing.Size(130, 60);
+            this.result.Size = new System.Drawing.Size(130, 20);
             this.result.TabIndex = 26;
             this.result.Visible = false;
             // 
@@ -377,7 +380,7 @@ namespace Project2
             this.Controls.Add(this.label3);
             this.Controls.Add(this.playButton);
             this.Controls.Add(this.resetButton);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.standButton);
             this.Controls.Add(this.hitButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -409,7 +412,7 @@ namespace Project2
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button hitButton;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button standButton;
         private System.Windows.Forms.Button resetButton;
         private System.Windows.Forms.Button playButton;
         private System.Windows.Forms.Label label3;
