@@ -53,12 +53,12 @@ namespace Project2
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.dealerVal = new System.Windows.Forms.TextBox();
             this.playerVal = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.result = new System.Windows.Forms.TextBox();
             this.softMode = new System.Windows.Forms.CheckBox();
             this.hardMode = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -71,13 +71,14 @@ namespace Project2
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(310, 9);
+            this.label1.Location = new System.Drawing.Point(381, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 20);
             this.label1.TabIndex = 0;
@@ -87,7 +88,7 @@ namespace Project2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(310, 116);
+            this.label2.Location = new System.Drawing.Point(381, 116);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 20);
             this.label2.TabIndex = 1;
@@ -96,9 +97,9 @@ namespace Project2
             // hitButton
             // 
             this.hitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hitButton.Location = new System.Drawing.Point(372, 235);
+            this.hitButton.Location = new System.Drawing.Point(412, 252);
             this.hitButton.Name = "hitButton";
-            this.hitButton.Size = new System.Drawing.Size(80, 35);
+            this.hitButton.Size = new System.Drawing.Size(91, 34);
             this.hitButton.TabIndex = 2;
             this.hitButton.Text = "Hit";
             this.hitButton.UseVisualStyleBackColor = true;
@@ -106,7 +107,7 @@ namespace Project2
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(203, 235);
+            this.button2.Location = new System.Drawing.Point(301, 252);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(91, 34);
             this.button2.TabIndex = 3;
@@ -115,29 +116,31 @@ namespace Project2
             // 
             // resetButton
             // 
+            this.resetButton.BackColor = System.Drawing.Color.Firebrick;
             this.resetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resetButton.Location = new System.Drawing.Point(203, 348);
+            this.resetButton.Location = new System.Drawing.Point(608, 343);
             this.resetButton.Name = "resetButton";
-            this.resetButton.Size = new System.Drawing.Size(91, 34);
+            this.resetButton.Size = new System.Drawing.Size(109, 38);
             this.resetButton.TabIndex = 4;
             this.resetButton.Text = "Reset";
-            this.resetButton.UseVisualStyleBackColor = true;
+            this.resetButton.UseVisualStyleBackColor = false;
             // 
             // playButton
             // 
+            this.playButton.BackColor = System.Drawing.Color.Ivory;
             this.playButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.playButton.Location = new System.Drawing.Point(361, 341);
+            this.playButton.Location = new System.Drawing.Point(608, 270);
             this.playButton.Name = "playButton";
-            this.playButton.Size = new System.Drawing.Size(91, 34);
+            this.playButton.Size = new System.Drawing.Size(109, 40);
             this.playButton.TabIndex = 5;
             this.playButton.Text = "Play";
-            this.playButton.UseVisualStyleBackColor = true;
+            this.playButton.UseVisualStyleBackColor = false;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(525, 348);
+            this.label3.Location = new System.Drawing.Point(10, 188);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(124, 20);
             this.label3.TabIndex = 6;
@@ -145,9 +148,9 @@ namespace Project2
             // 
             // seedVal
             // 
-            this.seedVal.Location = new System.Drawing.Point(655, 348);
+            this.seedVal.Location = new System.Drawing.Point(145, 188);
             this.seedVal.Name = "seedVal";
-            this.seedVal.Size = new System.Drawing.Size(100, 20);
+            this.seedVal.Size = new System.Drawing.Size(63, 20);
             this.seedVal.TabIndex = 7;
             this.seedVal.Text = "999";
             // 
@@ -155,7 +158,7 @@ namespace Project2
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 188);
+            this.label4.Location = new System.Drawing.Point(14, 23);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 20);
             this.label4.TabIndex = 8;
@@ -165,7 +168,7 @@ namespace Project2
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 274);
+            this.label5.Location = new System.Drawing.Point(17, 63);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 20);
             this.label5.TabIndex = 9;
@@ -173,21 +176,21 @@ namespace Project2
             // 
             // totalMoney
             // 
-            this.totalMoney.Location = new System.Drawing.Point(16, 223);
+            this.totalMoney.Location = new System.Drawing.Point(100, 25);
             this.totalMoney.Name = "totalMoney";
             this.totalMoney.Size = new System.Drawing.Size(100, 20);
             this.totalMoney.TabIndex = 10;
             // 
             // betVal
             // 
-            this.betVal.Location = new System.Drawing.Point(16, 304);
+            this.betVal.Location = new System.Drawing.Point(100, 65);
             this.betVal.Name = "betVal";
             this.betVal.Size = new System.Drawing.Size(100, 20);
             this.betVal.TabIndex = 11;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(177, 32);
+            this.pictureBox1.Location = new System.Drawing.Point(248, 32);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(47, 68);
             this.pictureBox1.TabIndex = 12;
@@ -195,7 +198,7 @@ namespace Project2
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(317, 32);
+            this.pictureBox2.Location = new System.Drawing.Point(388, 32);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(49, 68);
             this.pictureBox2.TabIndex = 13;
@@ -203,7 +206,7 @@ namespace Project2
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(245, 32);
+            this.pictureBox3.Location = new System.Drawing.Point(316, 32);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(49, 68);
             this.pictureBox3.TabIndex = 14;
@@ -211,7 +214,7 @@ namespace Project2
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(454, 31);
+            this.pictureBox4.Location = new System.Drawing.Point(525, 31);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(47, 69);
             this.pictureBox4.TabIndex = 15;
@@ -219,7 +222,7 @@ namespace Project2
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Location = new System.Drawing.Point(385, 31);
+            this.pictureBox5.Location = new System.Drawing.Point(456, 31);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(47, 69);
             this.pictureBox5.TabIndex = 16;
@@ -227,7 +230,7 @@ namespace Project2
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Location = new System.Drawing.Point(454, 137);
+            this.pictureBox6.Location = new System.Drawing.Point(525, 137);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(47, 71);
             this.pictureBox6.TabIndex = 17;
@@ -235,7 +238,7 @@ namespace Project2
             // 
             // pictureBox7
             // 
-            this.pictureBox7.Location = new System.Drawing.Point(385, 139);
+            this.pictureBox7.Location = new System.Drawing.Point(456, 139);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(47, 69);
             this.pictureBox7.TabIndex = 18;
@@ -243,7 +246,7 @@ namespace Project2
             // 
             // pictureBox8
             // 
-            this.pictureBox8.Location = new System.Drawing.Point(317, 139);
+            this.pictureBox8.Location = new System.Drawing.Point(388, 139);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(49, 69);
             this.pictureBox8.TabIndex = 19;
@@ -251,7 +254,7 @@ namespace Project2
             // 
             // pictureBox9
             // 
-            this.pictureBox9.Location = new System.Drawing.Point(245, 139);
+            this.pictureBox9.Location = new System.Drawing.Point(316, 139);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(49, 69);
             this.pictureBox9.TabIndex = 20;
@@ -259,7 +262,7 @@ namespace Project2
             // 
             // pictureBox10
             // 
-            this.pictureBox10.Location = new System.Drawing.Point(177, 139);
+            this.pictureBox10.Location = new System.Drawing.Point(248, 139);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(47, 69);
             this.pictureBox10.TabIndex = 21;
@@ -281,23 +284,14 @@ namespace Project2
             this.playerVal.Size = new System.Drawing.Size(108, 55);
             this.playerVal.TabIndex = 24;
             // 
-            // label7
+            // result
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(548, 260);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(55, 20);
-            this.label7.TabIndex = 25;
-            this.label7.Text = "Result";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(655, 249);
-            this.textBox1.MinimumSize = new System.Drawing.Size(20, 45);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(108, 45);
-            this.textBox1.TabIndex = 26;
+            this.result.Location = new System.Drawing.Point(353, 343);
+            this.result.MinimumSize = new System.Drawing.Size(20, 60);
+            this.result.Name = "result";
+            this.result.Size = new System.Drawing.Size(130, 60);
+            this.result.TabIndex = 26;
+            this.result.Visible = false;
             // 
             // softMode
             // 
@@ -326,7 +320,7 @@ namespace Project2
             this.groupBox1.Controls.Add(this.softMode);
             this.groupBox1.Controls.Add(this.hardMode);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(16, 13);
+            this.groupBox1.Location = new System.Drawing.Point(35, 49);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(144, 87);
             this.groupBox1.TabIndex = 29;
@@ -338,22 +332,35 @@ namespace Project2
             this.groupBox2.Controls.Add(this.dealerVal);
             this.groupBox2.Controls.Add(this.playerVal);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(578, 13);
+            this.groupBox2.Location = new System.Drawing.Point(617, 13);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(144, 195);
             this.groupBox2.TabIndex = 30;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Value";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label4);
+            this.groupBox3.Controls.Add(this.totalMoney);
+            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Controls.Add(this.betVal);
+            this.groupBox3.Location = new System.Drawing.Point(14, 289);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(226, 108);
+            this.groupBox3.TabIndex = 31;
+            this.groupBox3.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.ForestGreen;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.result);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox8);
@@ -364,10 +371,6 @@ namespace Project2
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.betVal);
-            this.Controls.Add(this.totalMoney);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.seedVal);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.playButton);
@@ -392,6 +395,8 @@ namespace Project2
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -423,12 +428,12 @@ namespace Project2
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.TextBox dealerVal;
         private System.Windows.Forms.TextBox playerVal;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox result;
         private System.Windows.Forms.CheckBox softMode;
         private System.Windows.Forms.CheckBox hardMode;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox3;
     }
 }
 
