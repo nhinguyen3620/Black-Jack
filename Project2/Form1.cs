@@ -16,5 +16,19 @@ namespace Project2
         {
             InitializeComponent();
         }
+
+        private void resetButton_Click(object sender, EventArgs e)
+        {
+            softMode.CheckState = CheckState.Unchecked;
+            hardMode.CheckState = CheckState.Unchecked;
+            seedVal.Text = string.Empty;
+            dealerVal.Text = string.Empty;
+            playerVal.Text = string.Empty;
+            totalMoney.Text = "100";
+            betVal.Text = string.Empty;
+            dealerVal.Text = string.Empty;
+            playerVal.Text = string.Empty;
+
+        }
     }
 }
