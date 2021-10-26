@@ -58,6 +58,9 @@
     <Compile Include="IDrawCard.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -79,6 +82,60 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Cards\10_Club.png" />
+    <Content Include="Cards\10_Dia.png" />
+    <Content Include="Cards\10_Hrt.png" />
+    <Content Include="Cards\10_Sp.png" />
+    <Content Include="Cards\2+Hrt.png" />
+    <Content Include="Cards\2_Club.png" />
+    <Content Include="Cards\2_Dia.png" />
+    <Content Include="Cards\2_Sp.png" />
+    <Content Include="Cards\3_Club.png" />
+    <Content Include="Cards\3_Dia.png" />
+    <Content Include="Cards\3_Hrt.png" />
+    <Content Include="Cards\3_Sp.png" />
+    <Content Include="Cards\4_Club.png" />
+    <Content Include="Cards\4_Dia.png" />
+    <Content Include="Cards\4_Hrt.png" />
+    <Content Include="Cards\4_Sp.png" />
+    <Content Include="Cards\5_Club.png" />
+    <Content Include="Cards\5_Dia.png" />
+    <Content Include="Cards\5_Hrt.png" />
+    <Content Include="Cards\5_Sp.png" />
+    <Content Include="Cards\6_Club.png" />
+    <Content Include="Cards\6_Dia.png" />
+    <Content Include="Cards\6_Hrt.png" />
+    <Content Include="Cards\6_Sp.png" />
+    <Content Include="Cards\7_Club.png" />
+    <Content Include="Cards\7_Dia.png" />
+    <Content Include="Cards\7_Hrt.png" />
+    <Content Include="Cards\7_Sp.png" />
+    <Content Include="Cards\8_Club.png" />
+    <Content Include="Cards\8_Dia.png" />
+    <Content Include="Cards\8_Hrt.png" />
+    <Content Include="Cards\8_Sp.png" />
+    <Content Include="Cards\9_Club.png" />
+    <Content Include="Cards\9_Dia.png" />
+    <Content Include="Cards\9_Hrt.png" />
+    <Content Include="Cards\9_Sp.png" />
+    <Content Include="Cards\A_Club.png" />
+    <Content Include="Cards\A_Dia.png" />
+    <Content Include="Cards\A_Hrt.png" />
+    <Content Include="Cards\A_Sp.png" />
+    <Content Include="Cards\J_CLub.png" />
+    <Content Include="Cards\J_Dia.png" />
+    <Content Include="Cards\J_Hrt.png" />
+    <Content Include="Cards\J_Sp.png" />
+    <Content Include="Cards\K_Club.png" />
+    <Content Include="Cards\K_Dia.png" />
+    <Content Include="Cards\K_Hrt.png" />
+    <Content Include="Cards\K_Sp.png" />
+    <Content Include="Cards\Q_Club.png" />
+    <Content Include="Cards\Q_Dia.png" />
+    <Content Include="Cards\Q_Hrt.png" />
+    <Content Include="Cards\Q_Sp.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
