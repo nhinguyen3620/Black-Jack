@@ -22,13 +22,23 @@ namespace Project2
             softMode.CheckState = CheckState.Unchecked;
             hardMode.CheckState = CheckState.Unchecked;
             seedVal.Text = string.Empty;
+            seedVal.ReadOnly = false;
             dealerVal.Text = string.Empty;
             playerVal.Text = string.Empty;
             totalMoney.Text = "100";
             betVal.Text = string.Empty;
             dealerVal.Text = string.Empty;
             playerVal.Text = string.Empty;
-
+            p1.Image = null;
+            p2.Image = null;
+            p3.Image = null;
+            p4.Image = null;
+            p5.Image = null;
+            p1.Image = null;
+            p2.Image = null;
+            p3.Image = null;
+            p4.Image = null;
+            p5.Image = null;
         }
     }
 }

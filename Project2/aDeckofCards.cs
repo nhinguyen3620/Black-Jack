@@ -5,7 +5,7 @@ namespace Project2
     public class aDeckofCards
     {
         private readonly List<aCard> deck = new List<aCard>();
-
+         
         public aDeckofCards()
         {
             for (int i = 0; i < 52; i++)

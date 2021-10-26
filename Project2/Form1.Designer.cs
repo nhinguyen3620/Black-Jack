@@ -179,6 +179,7 @@ namespace Project2
             // 
             this.totalMoney.Location = new System.Drawing.Point(100, 25);
             this.totalMoney.Name = "totalMoney";
+            this.totalMoney.ReadOnly = true;
             this.totalMoney.Size = new System.Drawing.Size(100, 20);
             this.totalMoney.TabIndex = 10;
             this.totalMoney.Text = "100";
@@ -275,6 +276,7 @@ namespace Project2
             this.dealerVal.Location = new System.Drawing.Point(13, 32);
             this.dealerVal.MinimumSize = new System.Drawing.Size(20, 55);
             this.dealerVal.Name = "dealerVal";
+            this.dealerVal.ReadOnly = true;
             this.dealerVal.Size = new System.Drawing.Size(108, 55);
             this.dealerVal.TabIndex = 23;
             // 
@@ -283,6 +285,7 @@ namespace Project2
             this.playerVal.Location = new System.Drawing.Point(13, 126);
             this.playerVal.MinimumSize = new System.Drawing.Size(20, 55);
             this.playerVal.Name = "playerVal";
+            this.playerVal.ReadOnly = true;
             this.playerVal.Size = new System.Drawing.Size(108, 55);
             this.playerVal.TabIndex = 24;
             // 
@@ -291,6 +294,7 @@ namespace Project2
             this.result.Location = new System.Drawing.Point(353, 343);
             this.result.MinimumSize = new System.Drawing.Size(20, 60);
             this.result.Name = "result";
+            this.result.ReadOnly = true;
             this.result.Size = new System.Drawing.Size(130, 60);
             this.result.TabIndex = 26;
             this.result.Visible = false;
