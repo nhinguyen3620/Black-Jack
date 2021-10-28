@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Project2
@@ -17,39 +10,87 @@ namespace Project2
         public Form1()
         {
             InitializeComponent();
+
+            // Resize image to fit the picture box
+            dealer_card1.SizeMode = PictureBoxSizeMode.StretchImage;
+            dealer_card2.SizeMode = PictureBoxSizeMode.StretchImage;
+            dealer_card3.SizeMode = PictureBoxSizeMode.StretchImage;
+            dealer_card4.SizeMode = PictureBoxSizeMode.StretchImage;
+            dealer_card5.SizeMode = PictureBoxSizeMode.StretchImage;
+            //====
+            player1_card1.SizeMode = PictureBoxSizeMode.StretchImage;
+            player1_card2.SizeMode = PictureBoxSizeMode.StretchImage;
+            player1_card3.SizeMode = PictureBoxSizeMode.StretchImage;
+            player1_card4.SizeMode = PictureBoxSizeMode.StretchImage;
+            player1_card5.SizeMode = PictureBoxSizeMode.StretchImage;
+
+            // Automatically choose soft 17 mode
+
         }
-
-
 
         private void resetButton_Click(object sender, EventArgs e)
         {
             softMode.CheckState = CheckState.Unchecked;
             hardMode.CheckState = CheckState.Unchecked;
+
             seedVal.Text = string.Empty;
             seedVal.ReadOnly = false;
-            dealerVal.Text = string.Empty;
-            playerVal.Text = string.Empty;
+
             totalMoney.Text = "100";
-            betVal.Text = string.Empty;
-            dealerVal.Text = string.Empty;
-            playerVal.Text = string.Empty;
-            p1.Image = null;
-            p2.Image = null;
-            p3.Image = null;
-            p4.Image = null;
-            p5.Image = null;
-            p1.Image = null;
-            p2.Image = null;
-            p3.Image = null;
-            p4.Image = null;
-            p5.Image = null;
+            betMoney.Text = string.Empty;
+
+            resetTable();
+        }
+
+        private void playButton_Click(object sender, EventArgs e)
+        {
+            // Check if the user bet yet
+            if (String.IsNullOrEmpty(betMoney.Text))
+            {
+                MessageBox.Show("Please choose money to bet!", "Error");
+                return;
+            }
+
+            // Check if the user's total is less than bet money
+            if (int.Parse(totalMoney.Text) < int.Parse(betMoney.Text))
+            {
+                MessageBox.Show("Please choose bet amount equal or less than your total!", "Invalid");
+                return;
+            }
+
+            resetTable();
+
+            // Draw 2 cards for each player
+            aCard firstCard = deck.Draw();
+            aCard secondCard = deck.Draw();
+            // Display player's cards
+            player1_card1.Image = firstCard.getPicture();
+            player1_card2.Image = secondCard.getPicture();
+
+
+            // Draw a card for the dealer
+            aCard card = deck.Draw();
+            // Display dealer's card
+            dealer_card1.Image = card.getPicture();
         }
 
         private void hitButton_Click(object sender, EventArgs e)
         {
-            // Draw a card
-            aCard card = deck.Draw();
-            // TODO: display player's card
+            // Draw a card and display to player
+            if (player1_card3.Image == null)
+            {
+                player1_card3.Image = deck.Draw().getPicture();
+            } else if (player1_card4.Image == null)
+            {
+                player1_card4.Image = deck.Draw().getPicture();
+            } else if (player1_card5.Image == null)
+            {
+                player1_card5.Image = deck.Draw().getPicture();
+            } else
+            {
+                MessageBox.Show("You can't draw more cards", "Error");
+                return;
+            }
         }
 
         private void standButton_Click(object sender, EventArgs e)
@@ -72,16 +113,22 @@ namespace Project2
             }
         }
 
-        private void playButton_Click(object sender, EventArgs e)
+        private void resetTable()
         {
-            // Draw 2 cards for each player
-            aCard firstCard = deck.Draw();
-            aCard secondCard = deck.Draw();
-            // TODO: display player's cards
+            dealerVal.Text = string.Empty;
+            playerVal.Text = string.Empty;
 
-            // Draw a card for the dealer
-            aCard card = deck.Draw();
-            // TODO: display dealer's card
+            player1_card1.Image = null;
+            player1_card2.Image = null;
+            player1_card3.Image = null;
+            player1_card4.Image = null;
+            player1_card5.Image = null;
+
+            dealer_card1.Image = null;
+            dealer_card2.Image = null;
+            dealer_card3.Image = null;
+            dealer_card4.Image = null;
+            dealer_card5.Image = null;
         }
     }
 }

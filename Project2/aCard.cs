@@ -1,4 +1,6 @@
-﻿namespace Project2
+﻿using System.Drawing;
+
+namespace Project2
 {
     public class aCard
     {
@@ -7,13 +9,18 @@
 
         private readonly ValueType value;
         private readonly FaceType face;
-        private readonly System.Drawing.Image picture;
+        private readonly Image picture;
 
         public aCard(ValueType value, FaceType face, System.Drawing.Image picture)
         {
             this.value = value;
             this.face = face;
             this.picture = picture;
+        }
+
+        public Image getPicture()
+        {
+            return this.picture;
         }
 
         public static ValueType calcValue(int val)

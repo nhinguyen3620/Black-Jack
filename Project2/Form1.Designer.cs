@@ -40,17 +40,17 @@ namespace Project2
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.totalMoney = new System.Windows.Forms.TextBox();
-            this.betVal = new System.Windows.Forms.TextBox();
-            this.d1 = new System.Windows.Forms.PictureBox();
-            this.d3 = new System.Windows.Forms.PictureBox();
-            this.d2 = new System.Windows.Forms.PictureBox();
-            this.d5 = new System.Windows.Forms.PictureBox();
-            this.d4 = new System.Windows.Forms.PictureBox();
-            this.p5 = new System.Windows.Forms.PictureBox();
-            this.p4 = new System.Windows.Forms.PictureBox();
-            this.p3 = new System.Windows.Forms.PictureBox();
-            this.p2 = new System.Windows.Forms.PictureBox();
-            this.p1 = new System.Windows.Forms.PictureBox();
+            this.betMoney = new System.Windows.Forms.TextBox();
+            this.dealer_card1 = new System.Windows.Forms.PictureBox();
+            this.dealer_card3 = new System.Windows.Forms.PictureBox();
+            this.dealer_card2 = new System.Windows.Forms.PictureBox();
+            this.dealer_card5 = new System.Windows.Forms.PictureBox();
+            this.dealer_card4 = new System.Windows.Forms.PictureBox();
+            this.player1_card5 = new System.Windows.Forms.PictureBox();
+            this.player1_card4 = new System.Windows.Forms.PictureBox();
+            this.player1_card3 = new System.Windows.Forms.PictureBox();
+            this.player1_card2 = new System.Windows.Forms.PictureBox();
+            this.player1_card1 = new System.Windows.Forms.PictureBox();
             this.dealerVal = new System.Windows.Forms.TextBox();
             this.playerVal = new System.Windows.Forms.TextBox();
             this.result = new System.Windows.Forms.TextBox();
@@ -59,16 +59,16 @@ namespace Project2
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            ((System.ComponentModel.ISupportInitialize)(this.d1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.d3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.d2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.d5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.d4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.p5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.p4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.p3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.p2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.p1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealer_card1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealer_card3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealer_card2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealer_card5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealer_card4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.player1_card5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.player1_card4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.player1_card3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.player1_card2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.player1_card1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -78,7 +78,7 @@ namespace Project2
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(381, 9);
+            this.label1.Location = new System.Drawing.Point(436, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 20);
             this.label1.TabIndex = 0;
@@ -88,7 +88,7 @@ namespace Project2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(381, 116);
+            this.label2.Location = new System.Drawing.Point(435, 145);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 20);
             this.label2.TabIndex = 1;
@@ -97,7 +97,7 @@ namespace Project2
             // hitButton
             // 
             this.hitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hitButton.Location = new System.Drawing.Point(412, 252);
+            this.hitButton.Location = new System.Drawing.Point(464, 296);
             this.hitButton.Name = "hitButton";
             this.hitButton.Size = new System.Drawing.Size(91, 34);
             this.hitButton.TabIndex = 2;
@@ -108,7 +108,7 @@ namespace Project2
             // standButton
             // 
             this.standButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.standButton.Location = new System.Drawing.Point(301, 252);
+            this.standButton.Location = new System.Drawing.Point(353, 296);
             this.standButton.Name = "standButton";
             this.standButton.Size = new System.Drawing.Size(91, 34);
             this.standButton.TabIndex = 3;
@@ -120,7 +120,7 @@ namespace Project2
             // 
             this.resetButton.BackColor = System.Drawing.Color.Firebrick;
             this.resetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resetButton.Location = new System.Drawing.Point(608, 343);
+            this.resetButton.Location = new System.Drawing.Point(671, 390);
             this.resetButton.Name = "resetButton";
             this.resetButton.Size = new System.Drawing.Size(109, 38);
             this.resetButton.TabIndex = 4;
@@ -132,7 +132,7 @@ namespace Project2
             // 
             this.playButton.BackColor = System.Drawing.Color.Ivory;
             this.playButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.playButton.Location = new System.Drawing.Point(608, 270);
+            this.playButton.Location = new System.Drawing.Point(671, 317);
             this.playButton.Name = "playButton";
             this.playButton.Size = new System.Drawing.Size(109, 40);
             this.playButton.TabIndex = 5;
@@ -152,7 +152,7 @@ namespace Project2
             // 
             // seedVal
             // 
-            this.seedVal.Location = new System.Drawing.Point(145, 188);
+            this.seedVal.Location = new System.Drawing.Point(134, 188);
             this.seedVal.Name = "seedVal";
             this.seedVal.Size = new System.Drawing.Size(63, 20);
             this.seedVal.TabIndex = 7;
@@ -187,92 +187,92 @@ namespace Project2
             this.totalMoney.TabIndex = 10;
             this.totalMoney.Text = "100";
             // 
-            // betVal
+            // betMoney
             // 
-            this.betVal.Location = new System.Drawing.Point(100, 65);
-            this.betVal.Name = "betVal";
-            this.betVal.Size = new System.Drawing.Size(100, 20);
-            this.betVal.TabIndex = 11;
+            this.betMoney.Location = new System.Drawing.Point(100, 65);
+            this.betMoney.Name = "betMoney";
+            this.betMoney.Size = new System.Drawing.Size(100, 20);
+            this.betMoney.TabIndex = 11;
             // 
-            // d1
+            // dealer_card1
             // 
-            this.d1.Location = new System.Drawing.Point(248, 32);
-            this.d1.Name = "d1";
-            this.d1.Size = new System.Drawing.Size(47, 68);
-            this.d1.TabIndex = 12;
-            this.d1.TabStop = false;
+            this.dealer_card1.Location = new System.Drawing.Point(252, 42);
+            this.dealer_card1.Name = "dealer_card1";
+            this.dealer_card1.Size = new System.Drawing.Size(60, 80);
+            this.dealer_card1.TabIndex = 12;
+            this.dealer_card1.TabStop = false;
             // 
-            // d3
+            // dealer_card3
             // 
-            this.d3.Location = new System.Drawing.Point(388, 32);
-            this.d3.Name = "d3";
-            this.d3.Size = new System.Drawing.Size(49, 68);
-            this.d3.TabIndex = 13;
-            this.d3.TabStop = false;
+            this.dealer_card3.Location = new System.Drawing.Point(434, 42);
+            this.dealer_card3.Name = "dealer_card3";
+            this.dealer_card3.Size = new System.Drawing.Size(60, 80);
+            this.dealer_card3.TabIndex = 13;
+            this.dealer_card3.TabStop = false;
             // 
-            // d2
+            // dealer_card2
             // 
-            this.d2.Location = new System.Drawing.Point(316, 32);
-            this.d2.Name = "d2";
-            this.d2.Size = new System.Drawing.Size(49, 68);
-            this.d2.TabIndex = 14;
-            this.d2.TabStop = false;
+            this.dealer_card2.Location = new System.Drawing.Point(343, 42);
+            this.dealer_card2.Name = "dealer_card2";
+            this.dealer_card2.Size = new System.Drawing.Size(60, 80);
+            this.dealer_card2.TabIndex = 14;
+            this.dealer_card2.TabStop = false;
             // 
-            // d5
+            // dealer_card5
             // 
-            this.d5.Location = new System.Drawing.Point(525, 31);
-            this.d5.Name = "d5";
-            this.d5.Size = new System.Drawing.Size(47, 69);
-            this.d5.TabIndex = 15;
-            this.d5.TabStop = false;
+            this.dealer_card5.Location = new System.Drawing.Point(606, 42);
+            this.dealer_card5.Name = "dealer_card5";
+            this.dealer_card5.Size = new System.Drawing.Size(60, 80);
+            this.dealer_card5.TabIndex = 15;
+            this.dealer_card5.TabStop = false;
             // 
-            // d4
+            // dealer_card4
             // 
-            this.d4.Location = new System.Drawing.Point(456, 31);
-            this.d4.Name = "d4";
-            this.d4.Size = new System.Drawing.Size(47, 69);
-            this.d4.TabIndex = 16;
-            this.d4.TabStop = false;
+            this.dealer_card4.Location = new System.Drawing.Point(515, 42);
+            this.dealer_card4.Name = "dealer_card4";
+            this.dealer_card4.Size = new System.Drawing.Size(60, 80);
+            this.dealer_card4.TabIndex = 16;
+            this.dealer_card4.TabStop = false;
             // 
-            // p5
+            // player1_card5
             // 
-            this.p5.Location = new System.Drawing.Point(525, 137);
-            this.p5.Name = "p5";
-            this.p5.Size = new System.Drawing.Size(47, 71);
-            this.p5.TabIndex = 17;
-            this.p5.TabStop = false;
+            this.player1_card5.Location = new System.Drawing.Point(606, 168);
+            this.player1_card5.Name = "player1_card5";
+            this.player1_card5.Size = new System.Drawing.Size(60, 80);
+            this.player1_card5.TabIndex = 17;
+            this.player1_card5.TabStop = false;
             // 
-            // p4
+            // player1_card4
             // 
-            this.p4.Location = new System.Drawing.Point(456, 139);
-            this.p4.Name = "p4";
-            this.p4.Size = new System.Drawing.Size(47, 69);
-            this.p4.TabIndex = 18;
-            this.p4.TabStop = false;
+            this.player1_card4.Location = new System.Drawing.Point(515, 168);
+            this.player1_card4.Name = "player1_card4";
+            this.player1_card4.Size = new System.Drawing.Size(60, 80);
+            this.player1_card4.TabIndex = 18;
+            this.player1_card4.TabStop = false;
             // 
-            // p3
+            // player1_card3
             // 
-            this.p3.Location = new System.Drawing.Point(388, 139);
-            this.p3.Name = "p3";
-            this.p3.Size = new System.Drawing.Size(49, 69);
-            this.p3.TabIndex = 19;
-            this.p3.TabStop = false;
+            this.player1_card3.Location = new System.Drawing.Point(431, 168);
+            this.player1_card3.Name = "player1_card3";
+            this.player1_card3.Size = new System.Drawing.Size(60, 80);
+            this.player1_card3.TabIndex = 19;
+            this.player1_card3.TabStop = false;
             // 
-            // p2
+            // player1_card2
             // 
-            this.p2.Location = new System.Drawing.Point(316, 139);
-            this.p2.Name = "p2";
-            this.p2.Size = new System.Drawing.Size(49, 69);
-            this.p2.TabIndex = 20;
-            this.p2.TabStop = false;
+            this.player1_card2.Location = new System.Drawing.Point(343, 168);
+            this.player1_card2.Name = "player1_card2";
+            this.player1_card2.Size = new System.Drawing.Size(60, 80);
+            this.player1_card2.TabIndex = 20;
+            this.player1_card2.TabStop = false;
             // 
-            // p1
+            // player1_card1
             // 
-            this.p1.Location = new System.Drawing.Point(248, 139);
-            this.p1.Name = "p1";
-            this.p1.Size = new System.Drawing.Size(47, 69);
-            this.p1.TabIndex = 21;
-            this.p1.TabStop = false;
+            this.player1_card1.Location = new System.Drawing.Point(252, 168);
+            this.player1_card1.Name = "player1_card1";
+            this.player1_card1.Size = new System.Drawing.Size(60, 80);
+            this.player1_card1.TabIndex = 21;
+            this.player1_card1.TabStop = false;
             // 
             // dealerVal
             // 
@@ -280,7 +280,7 @@ namespace Project2
             this.dealerVal.MinimumSize = new System.Drawing.Size(20, 55);
             this.dealerVal.Name = "dealerVal";
             this.dealerVal.ReadOnly = true;
-            this.dealerVal.Size = new System.Drawing.Size(108, 55);
+            this.dealerVal.Size = new System.Drawing.Size(108, 29);
             this.dealerVal.TabIndex = 23;
             // 
             // playerVal
@@ -289,12 +289,12 @@ namespace Project2
             this.playerVal.MinimumSize = new System.Drawing.Size(20, 55);
             this.playerVal.Name = "playerVal";
             this.playerVal.ReadOnly = true;
-            this.playerVal.Size = new System.Drawing.Size(108, 55);
+            this.playerVal.Size = new System.Drawing.Size(108, 29);
             this.playerVal.TabIndex = 24;
             // 
             // result
             // 
-            this.result.Location = new System.Drawing.Point(353, 343);
+            this.result.Location = new System.Drawing.Point(392, 359);
             this.result.MinimumSize = new System.Drawing.Size(20, 60);
             this.result.Name = "result";
             this.result.ReadOnly = true;
@@ -341,7 +341,7 @@ namespace Project2
             this.groupBox2.Controls.Add(this.dealerVal);
             this.groupBox2.Controls.Add(this.playerVal);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(617, 13);
+            this.groupBox2.Location = new System.Drawing.Point(705, 31);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(144, 195);
             this.groupBox2.TabIndex = 30;
@@ -353,8 +353,8 @@ namespace Project2
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.totalMoney);
             this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.betVal);
-            this.groupBox3.Location = new System.Drawing.Point(14, 289);
+            this.groupBox3.Controls.Add(this.betMoney);
+            this.groupBox3.Location = new System.Drawing.Point(14, 336);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(226, 108);
             this.groupBox3.TabIndex = 31;
@@ -365,21 +365,21 @@ namespace Project2
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.ForestGreen;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(878, 502);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.result);
-            this.Controls.Add(this.p1);
-            this.Controls.Add(this.p2);
-            this.Controls.Add(this.p3);
-            this.Controls.Add(this.p4);
-            this.Controls.Add(this.p5);
-            this.Controls.Add(this.d4);
-            this.Controls.Add(this.d5);
-            this.Controls.Add(this.d2);
-            this.Controls.Add(this.d3);
-            this.Controls.Add(this.d1);
+            this.Controls.Add(this.player1_card1);
+            this.Controls.Add(this.player1_card2);
+            this.Controls.Add(this.player1_card3);
+            this.Controls.Add(this.player1_card4);
+            this.Controls.Add(this.player1_card5);
+            this.Controls.Add(this.dealer_card4);
+            this.Controls.Add(this.dealer_card5);
+            this.Controls.Add(this.dealer_card2);
+            this.Controls.Add(this.dealer_card3);
+            this.Controls.Add(this.dealer_card1);
             this.Controls.Add(this.seedVal);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.playButton);
@@ -390,16 +390,16 @@ namespace Project2
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.d1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.d3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.d2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.d5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.d4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.p5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.p4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.p3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.p2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.p1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealer_card1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealer_card3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealer_card2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealer_card5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealer_card4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.player1_card5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.player1_card4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.player1_card3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.player1_card2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.player1_card1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -424,17 +424,17 @@ namespace Project2
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox totalMoney;
-        private System.Windows.Forms.TextBox betVal;
-        private System.Windows.Forms.PictureBox d1;
-        private System.Windows.Forms.PictureBox d3;
-        private System.Windows.Forms.PictureBox d2;
-        private System.Windows.Forms.PictureBox d5;
-        private System.Windows.Forms.PictureBox d4;
-        private System.Windows.Forms.PictureBox p5;
-        private System.Windows.Forms.PictureBox p4;
-        private System.Windows.Forms.PictureBox p3;
-        private System.Windows.Forms.PictureBox p2;
-        private System.Windows.Forms.PictureBox p1;
+        private System.Windows.Forms.TextBox betMoney;
+        private System.Windows.Forms.PictureBox dealer_card1;
+        private System.Windows.Forms.PictureBox dealer_card3;
+        private System.Windows.Forms.PictureBox dealer_card2;
+        private System.Windows.Forms.PictureBox dealer_card5;
+        private System.Windows.Forms.PictureBox dealer_card4;
+        private System.Windows.Forms.PictureBox player1_card5;
+        private System.Windows.Forms.PictureBox player1_card4;
+        private System.Windows.Forms.PictureBox player1_card3;
+        private System.Windows.Forms.PictureBox player1_card2;
+        private System.Windows.Forms.PictureBox player1_card1;
         private System.Windows.Forms.TextBox dealerVal;
         private System.Windows.Forms.TextBox playerVal;
         private System.Windows.Forms.TextBox result;
