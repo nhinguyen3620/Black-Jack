@@ -6,7 +6,8 @@ namespace Project2
     public partial class Form1 : Form
     {
         static aDeckofCards deck = new aDeckofCards();
-
+        int playerValue = 0;
+        int dealerValue = 0;
         public Form1()
         {
             InitializeComponent();
@@ -72,6 +73,15 @@ namespace Project2
             aCard card = deck.Draw();
             // Display dealer's card
             dealer_card1.Image = card.getPicture();
+
+            //calculate player's value
+            playerValue = firstCard.getValue() + secondCard.getValue();
+            playerVal.Text = playerValue.ToString();
+
+            //calculate dealer's value
+            dealerValue = card.getValue();
+            dealerVal.Text = dealerValue.ToString();
+
         }
 
         private void hitButton_Click(object sender, EventArgs e)
@@ -79,18 +89,27 @@ namespace Project2
             // Draw a card and display to player
             if (player1_card3.Image == null)
             {
-                player1_card3.Image = deck.Draw().getPicture();
+                aCard card3 = deck.Draw();
+                player1_card3.Image = card3.getPicture();
+                playerVal.Text = (playerValue + card3.getValue()).ToString();
+
             } else if (player1_card4.Image == null)
             {
-                player1_card4.Image = deck.Draw().getPicture();
+                aCard card4 = deck.Draw();
+                player1_card4.Image = card4.getPicture();
+                playerVal.Text = (playerValue + card4.getValue()).ToString();
             } else if (player1_card5.Image == null)
             {
-                player1_card5.Image = deck.Draw().getPicture();
+                aCard card5 = deck.Draw();
+                player1_card5.Image = card5.getPicture();
+                playerVal.Text = (playerValue + card5.getValue()).ToString();
             } else
             {
                 MessageBox.Show("You can't draw more cards", "Error");
                 return;
             }
+
+
         }
 
         private void standButton_Click(object sender, EventArgs e)
