@@ -6,7 +6,7 @@ namespace Project2
     public partial class Form1 : Form
     {
         static aDeckofCards deck = new aDeckofCards();
-        int playerValue = 0;
+        static int playerValue = 0;
         int dealerValue = 0;
         public Form1()
         {
@@ -39,6 +39,8 @@ namespace Project2
 
             totalMoney.Text = "100";
             betMoney.Text = string.Empty;
+
+            playerValue = 0;
 
             resetTable();
         }
@@ -91,18 +93,21 @@ namespace Project2
             {
                 aCard card3 = deck.Draw();
                 player1_card3.Image = card3.getPicture();
-                playerVal.Text = (playerValue + card3.getValue()).ToString();
+                playerValue += card3.getValue();
+                playerVal.Text = playerValue.ToString();
 
             } else if (player1_card4.Image == null)
             {
                 aCard card4 = deck.Draw();
                 player1_card4.Image = card4.getPicture();
-                playerVal.Text = (playerValue + card4.getValue()).ToString();
+                playerValue += card4.getValue();
+                playerVal.Text = (playerValue).ToString();
             } else if (player1_card5.Image == null)
             {
                 aCard card5 = deck.Draw();
                 player1_card5.Image = card5.getPicture();
-                playerVal.Text = (playerValue + card5.getValue()).ToString();
+                playerValue += card5.getValue();
+                playerVal.Text = playerValue.ToString();
             } else
             {
                 MessageBox.Show("You can't draw more cards", "Error");
