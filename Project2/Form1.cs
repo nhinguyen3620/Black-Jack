@@ -6,8 +6,7 @@ namespace Project2
     public partial class Form1 : Form
     {
         static aDeckofCards deck = new aDeckofCards();
-        static int playerValue = 0;
-        int dealerValue = 0;
+       
         public Form1()
         {
             InitializeComponent();
@@ -40,7 +39,8 @@ namespace Project2
             totalMoney.Text = "100";
             betMoney.Text = string.Empty;
 
-            playerValue = 0;
+            playerVal.Text = string.Empty;
+            dealerVal.Text = string.Empty;
 
             resetTable();
         }
@@ -70,6 +70,8 @@ namespace Project2
             player1_card1.Image = firstCard.getPicture();
             player1_card2.Image = secondCard.getPicture();
 
+            int playerValue;
+            int dealerValue;
 
             // Draw a card for the dealer
             aCard card = deck.Draw();
@@ -88,6 +90,7 @@ namespace Project2
 
         private void hitButton_Click(object sender, EventArgs e)
         {
+            int playerValue = int.Parse(playerVal.Text);
             // Draw a card and display to player
             if (player1_card3.Image == null)
             {
@@ -119,22 +122,70 @@ namespace Project2
 
         private void standButton_Click(object sender, EventArgs e)
         {
-            // Draw until dealer's hand is > 17
-            while (false)   // TODO: Add condition for calculation 
+            if (player1_card1.Image == null)
             {
-                aCard card = deck.Draw();
-                // TODO: display dealer's card
+                MessageBox.Show("You have to play game first!!", "Error");
+                return;
             }
 
+           
+            int playerValue = int.Parse(playerVal.Text);
+            int dealerValue = int.Parse(dealerVal.Text);
+           
+            // Draw until dealer's hand is > 17
+            if (dealerValue < 17)
+            {
+                aCard card2 = deck.Draw();
+                dealer_card2.Image = card2.getPicture();
+                dealerValue += card2.getValue();
+                dealerVal.Text = dealerValue.ToString();
+            }
+
+            if (dealerValue < 17)
+            {
+                aCard card3 = deck.Draw();
+                dealer_card3.Image = card3.getPicture();
+                dealerValue += card3.getValue();
+                dealerVal.Text = dealerValue.ToString();
+            }
+
+            if (dealerValue < 17)
+            { 
+                aCard card4 = deck.Draw();
+                dealer_card4.Image = card4.getPicture();
+                dealerValue += card4.getValue();
+                dealerVal.Text = dealerValue.ToString();
+            }
+
+            if (dealerValue < 17)
+            {
+                aCard card5 = deck.Draw();
+                dealer_card5.Image = card5.getPicture();
+                dealerValue += card5.getValue();
+                dealerVal.Text = dealerValue.ToString();
+            }
+            
+
+
             // Calculate outcome
-            if (true)   // TODO: if player wins
+            if (playerValue <= 21 && (playerValue > dealerValue || dealerValue > 21))
             {
                 totalMoney.Text = (int.Parse(totalMoney.Text) + 15).ToString();
+                gameResult.Text = "YOU WIN!!!";
+                gameResult.Visible = true;
             }
-            else if (true) // TODO: if lose
+            if (dealerValue <= 21 && (playerValue < dealerValue || playerValue > 21)) 
             {
                 totalMoney.Text = (int.Parse(totalMoney.Text) - 10).ToString();
+                gameResult.Text = "YOU LOSE!!!";
+                gameResult.Visible = true;
             }
+            if (playerValue > 21 && dealerValue > 21)
+            {
+                gameResult.Text = "Both busted. You lose!!";
+                gameResult.Visible = true;
+            }
+
         }
 
         private void resetTable()
@@ -153,6 +204,8 @@ namespace Project2
             dealer_card3.Image = null;
             dealer_card4.Image = null;
             dealer_card5.Image = null;
+
+            gameResult.Visible = false;
         }
     }
 }

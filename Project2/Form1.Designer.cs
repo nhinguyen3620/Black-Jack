@@ -59,6 +59,7 @@ namespace Project2
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.gameResult = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dealer_card1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dealer_card3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dealer_card2)).BeginInit();
@@ -298,7 +299,7 @@ namespace Project2
             this.result.MinimumSize = new System.Drawing.Size(20, 60);
             this.result.Name = "result";
             this.result.ReadOnly = true;
-            this.result.Size = new System.Drawing.Size(130, 60);
+            this.result.Size = new System.Drawing.Size(130, 20);
             this.result.TabIndex = 26;
             this.result.Visible = false;
             // 
@@ -360,12 +361,25 @@ namespace Project2
             this.groupBox3.TabIndex = 31;
             this.groupBox3.TabStop = false;
             // 
+            // gameResult
+            // 
+            this.gameResult.AutoSize = true;
+            this.gameResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gameResult.Location = new System.Drawing.Point(355, 401);
+            this.gameResult.MinimumSize = new System.Drawing.Size(200, 100);
+            this.gameResult.Name = "gameResult";
+            this.gameResult.Size = new System.Drawing.Size(200, 100);
+            this.gameResult.TabIndex = 32;
+            this.gameResult.Text = "label6";
+            this.gameResult.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.ForestGreen;
             this.ClientSize = new System.Drawing.Size(878, 502);
+            this.Controls.Add(this.gameResult);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -443,6 +457,7 @@ namespace Project2
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label gameResult;
     }
 }
 
