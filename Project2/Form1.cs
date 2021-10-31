@@ -168,20 +168,27 @@ namespace Project2
 
 
             // Calculate outcome
+            //win
             if (playerValue <= 21 && (playerValue > dealerValue || dealerValue > 21))
             {
-                totalMoney.Text = (int.Parse(totalMoney.Text) + 15).ToString();
+                int bet = (int.Parse(betMoney.Text));
+                totalMoney.Text = (int.Parse(totalMoney.Text) + bet * 3/2).ToString();
                 gameResult.Text = "YOU WIN!!!";
                 gameResult.Visible = true;
             }
+            //lose
             if (dealerValue <= 21 && (playerValue < dealerValue || playerValue > 21)) 
             {
-                totalMoney.Text = (int.Parse(totalMoney.Text) - 10).ToString();
+                int bet = (int.Parse(betMoney.Text));
+                totalMoney.Text = (int.Parse(totalMoney.Text) - bet).ToString();
                 gameResult.Text = "YOU LOSE!!!";
                 gameResult.Visible = true;
             }
+            //lose
             if (playerValue > 21 && dealerValue > 21)
             {
+                int bet = (int.Parse(betMoney.Text));
+                totalMoney.Text = (int.Parse(totalMoney.Text) - bet).ToString();
                 gameResult.Text = "Both busted. You lose!!";
                 gameResult.Visible = true;
             }
