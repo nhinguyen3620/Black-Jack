@@ -1,15 +1,17 @@
 ﻿using System.Drawing;
+using System.Windows.Forms;
 
 namespace Project2
 {
     public class aCard
     {
-        public enum ValueType:int { Ace=1, Two=2, Three=3, Four=4, Five=5, Six=6, Seven=7, Eight=8, Nine=9, Ten=10, Jack=10, Queen=10, King=10, None=-1 }
+        public enum ValueType:int { Ace, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Jack, Queen, King, None }
         public enum FaceType { Spades=1, Clubs=2, Diamonds=3, Hearts=4, None=-1 }
 
         private readonly ValueType value;
         private readonly FaceType face;
         private readonly Image picture;
+        public PictureBox card_display;
 
         public aCard(ValueType value, FaceType face, System.Drawing.Image picture)
         {
@@ -25,28 +27,28 @@ namespace Project2
 
         public int getValue()
         {
-          if (this.value == ValueType.Ace)
-                    return 1;
-          else if (this.value == ValueType.Two)
-                    return 2;
+            if (this.value == ValueType.Ace)
+                return 11;
+            else if (this.value == ValueType.Two)
+                return 2;
             else if (this.value == ValueType.Three)
-                    return 3;
+                return 3;
             else if (this.value == ValueType.Four)
-                    return 4;
+                return 4;
             else if (this.value == ValueType.Five)
-                    return 5;
+                return 5;
             else if (this.value == ValueType.Six)
-                    return 6;
+                return 6;
             else if (this.value == ValueType.Seven)
-                    return 7;
+                return 7;
             else if (this.value == ValueType.Eight)
-                    return 8;
+                return 8;
             else if (this.value == ValueType.Nine)
-                    return 9;
+                return 9;
             else if (this.value == ValueType.Ten || this.value == ValueType.Jack || this.value == ValueType.Queen || this.value == ValueType.King) 
-                    return 10;                
-             else
-                    return 0;       
+                return 10;                
+            else
+                return 0;       
         }
 
         public static ValueType calcValue(int val)

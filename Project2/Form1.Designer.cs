@@ -41,16 +41,6 @@ namespace Project2
             this.label5 = new System.Windows.Forms.Label();
             this.totalMoney = new System.Windows.Forms.TextBox();
             this.betMoney = new System.Windows.Forms.TextBox();
-            this.dealer_card1 = new System.Windows.Forms.PictureBox();
-            this.dealer_card3 = new System.Windows.Forms.PictureBox();
-            this.dealer_card2 = new System.Windows.Forms.PictureBox();
-            this.dealer_card5 = new System.Windows.Forms.PictureBox();
-            this.dealer_card4 = new System.Windows.Forms.PictureBox();
-            this.player1_card5 = new System.Windows.Forms.PictureBox();
-            this.player1_card4 = new System.Windows.Forms.PictureBox();
-            this.player1_card3 = new System.Windows.Forms.PictureBox();
-            this.player1_card2 = new System.Windows.Forms.PictureBox();
-            this.player1_card1 = new System.Windows.Forms.PictureBox();
             this.dealerVal = new System.Windows.Forms.TextBox();
             this.playerVal = new System.Windows.Forms.TextBox();
             this.result = new System.Windows.Forms.TextBox();
@@ -60,16 +50,6 @@ namespace Project2
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.gameResult = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dealer_card1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dealer_card3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dealer_card2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dealer_card5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dealer_card4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.player1_card5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.player1_card4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.player1_card3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.player1_card2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.player1_card1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -195,86 +175,6 @@ namespace Project2
             this.betMoney.Size = new System.Drawing.Size(100, 20);
             this.betMoney.TabIndex = 11;
             // 
-            // dealer_card1
-            // 
-            this.dealer_card1.Location = new System.Drawing.Point(252, 42);
-            this.dealer_card1.Name = "dealer_card1";
-            this.dealer_card1.Size = new System.Drawing.Size(60, 80);
-            this.dealer_card1.TabIndex = 12;
-            this.dealer_card1.TabStop = false;
-            // 
-            // dealer_card3
-            // 
-            this.dealer_card3.Location = new System.Drawing.Point(434, 42);
-            this.dealer_card3.Name = "dealer_card3";
-            this.dealer_card3.Size = new System.Drawing.Size(60, 80);
-            this.dealer_card3.TabIndex = 13;
-            this.dealer_card3.TabStop = false;
-            // 
-            // dealer_card2
-            // 
-            this.dealer_card2.Location = new System.Drawing.Point(343, 42);
-            this.dealer_card2.Name = "dealer_card2";
-            this.dealer_card2.Size = new System.Drawing.Size(60, 80);
-            this.dealer_card2.TabIndex = 14;
-            this.dealer_card2.TabStop = false;
-            // 
-            // dealer_card5
-            // 
-            this.dealer_card5.Location = new System.Drawing.Point(606, 42);
-            this.dealer_card5.Name = "dealer_card5";
-            this.dealer_card5.Size = new System.Drawing.Size(60, 80);
-            this.dealer_card5.TabIndex = 15;
-            this.dealer_card5.TabStop = false;
-            // 
-            // dealer_card4
-            // 
-            this.dealer_card4.Location = new System.Drawing.Point(515, 42);
-            this.dealer_card4.Name = "dealer_card4";
-            this.dealer_card4.Size = new System.Drawing.Size(60, 80);
-            this.dealer_card4.TabIndex = 16;
-            this.dealer_card4.TabStop = false;
-            // 
-            // player1_card5
-            // 
-            this.player1_card5.Location = new System.Drawing.Point(606, 168);
-            this.player1_card5.Name = "player1_card5";
-            this.player1_card5.Size = new System.Drawing.Size(60, 80);
-            this.player1_card5.TabIndex = 17;
-            this.player1_card5.TabStop = false;
-            // 
-            // player1_card4
-            // 
-            this.player1_card4.Location = new System.Drawing.Point(515, 168);
-            this.player1_card4.Name = "player1_card4";
-            this.player1_card4.Size = new System.Drawing.Size(60, 80);
-            this.player1_card4.TabIndex = 18;
-            this.player1_card4.TabStop = false;
-            // 
-            // player1_card3
-            // 
-            this.player1_card3.Location = new System.Drawing.Point(431, 168);
-            this.player1_card3.Name = "player1_card3";
-            this.player1_card3.Size = new System.Drawing.Size(60, 80);
-            this.player1_card3.TabIndex = 19;
-            this.player1_card3.TabStop = false;
-            // 
-            // player1_card2
-            // 
-            this.player1_card2.Location = new System.Drawing.Point(343, 168);
-            this.player1_card2.Name = "player1_card2";
-            this.player1_card2.Size = new System.Drawing.Size(60, 80);
-            this.player1_card2.TabIndex = 20;
-            this.player1_card2.TabStop = false;
-            // 
-            // player1_card1
-            // 
-            this.player1_card1.Location = new System.Drawing.Point(252, 168);
-            this.player1_card1.Name = "player1_card1";
-            this.player1_card1.Size = new System.Drawing.Size(60, 80);
-            this.player1_card1.TabIndex = 21;
-            this.player1_card1.TabStop = false;
-            // 
             // dealerVal
             // 
             this.dealerVal.Location = new System.Drawing.Point(13, 32);
@@ -379,21 +279,11 @@ namespace Project2
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.ForestGreen;
             this.ClientSize = new System.Drawing.Size(878, 502);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gameResult);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.result);
-            this.Controls.Add(this.player1_card1);
-            this.Controls.Add(this.player1_card2);
-            this.Controls.Add(this.player1_card3);
-            this.Controls.Add(this.player1_card4);
-            this.Controls.Add(this.player1_card5);
-            this.Controls.Add(this.dealer_card4);
-            this.Controls.Add(this.dealer_card5);
-            this.Controls.Add(this.dealer_card2);
-            this.Controls.Add(this.dealer_card3);
-            this.Controls.Add(this.dealer_card1);
             this.Controls.Add(this.seedVal);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.playButton);
@@ -404,16 +294,6 @@ namespace Project2
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dealer_card1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dealer_card3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dealer_card2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dealer_card5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dealer_card4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.player1_card5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.player1_card4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.player1_card3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.player1_card2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.player1_card1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -439,16 +319,6 @@ namespace Project2
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox totalMoney;
         private System.Windows.Forms.TextBox betMoney;
-        private System.Windows.Forms.PictureBox dealer_card1;
-        private System.Windows.Forms.PictureBox dealer_card3;
-        private System.Windows.Forms.PictureBox dealer_card2;
-        private System.Windows.Forms.PictureBox dealer_card5;
-        private System.Windows.Forms.PictureBox dealer_card4;
-        private System.Windows.Forms.PictureBox player1_card5;
-        private System.Windows.Forms.PictureBox player1_card4;
-        private System.Windows.Forms.PictureBox player1_card3;
-        private System.Windows.Forms.PictureBox player1_card2;
-        private System.Windows.Forms.PictureBox player1_card1;
         private System.Windows.Forms.TextBox dealerVal;
         private System.Windows.Forms.TextBox playerVal;
         private System.Windows.Forms.TextBox result;
