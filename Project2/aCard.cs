@@ -11,7 +11,7 @@ namespace Project2
         private readonly ValueType value;
         private readonly FaceType face;
         private readonly Image picture;
-        public PictureBox card_display;
+        public PictureBox card_display = null;
 
         public aCard(ValueType value, FaceType face, System.Drawing.Image picture)
         {

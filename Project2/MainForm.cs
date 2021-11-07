@@ -5,35 +5,43 @@ using System.Drawing;
 
 namespace Project2
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        aDeckofCards deck;
-        List<aCard> dealer_cards = new List<aCard>();
-        List<aCard> player_cards = new List<aCard>();
+        private aShoe pileOfCards;
+        private List<aCard> dealer_cards = new List<aCard>();
+        private List<aCard> player_cards = new List<aCard>();
 
-        int playerValue = 0;
-        int dealerValue = 0;
+        // Current hand values
+        private int playerValue = 0;
+        private int dealerValue = 0;
 
-        int player_ace = 0;
-        int dealer_ace = 0;
+        // Number of aces
+        private int player_ace = 0;
+        private int dealer_ace = 0;
+
+        // Variables from Menu
+        private int numOfDecks;
+        private int seedValue;
+        private bool softMode;
 
 
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
 
-            // Automatically choose soft 17 mode
+            // Get variables value from Main Menu
+            numOfDecks = MenuForm.numberOfDecks;
+            seedValue = MenuForm.seedValue;
+            softMode = MenuForm.softModeButton;
 
+            // Make hand values & Available $ readonly
+            dealerVal.Enabled = false;
+            playerVal.Enabled = false;
+            totalMoney.Enabled = false;
         }
 
         private void resetButton_Click(object sender, EventArgs e)
         {
-            softMode.CheckState = CheckState.Unchecked;
-            hardMode.CheckState = CheckState.Unchecked;
-
-            seedVal.Text = string.Empty;
-            seedVal.ReadOnly = false;
-
             totalMoney.Text = "100";
             betMoney.Text = string.Empty;
 
@@ -45,21 +53,27 @@ namespace Project2
             // Check if the user bet yet
             if (String.IsNullOrEmpty(betMoney.Text))
             {
-                MessageBox.Show("Please choose money to bet!", "Error");
+                MessageBox.Show("Please enter money to bet!", "Error");
                 return;
             }
 
             // Check if the user's total is less than bet money
             if (int.Parse(totalMoney.Text) < int.Parse(betMoney.Text))
             {
-                MessageBox.Show("Please choose bet amount equal or less than your total!", "Invalid");
+                MessageBox.Show("Please enter bet amount equal or less than your total!", "Invalid");
                 return;
             }
+
+            // Shuffle number of decks into a pile
+            pileOfCards = new aShoe(numOfDecks, seedValue);
+
 
             // Reset previous game
             resetCards(sender, e);
             gameResult.Visible = false;
-            deck = new aDeckofCards();
+            if (!hitButton.Enabled) toggleHitButton();
+            if (!standButton.Enabled) toggleStandButton();
+            if (playButton.Enabled) togglePlayButton();
 
             // Draw 2 cards for each player and display
             for (int i = 0; i < 2; i++)
@@ -84,8 +98,11 @@ namespace Project2
 
         private void hitButton_Click(object sender, EventArgs e)
         {
+            // Check if game is valid to proceed
+            if (!isGameValidate()) return;
+
             // Check Black Jack
-            if (checkBlackJack(player_cards))
+            if (isBlackJack(player_cards))
             {
                 MessageBox.Show("You are already Natural Black Jack", "Error");
                 return;
@@ -115,14 +132,26 @@ namespace Project2
 
         private void standButton_Click(object sender, EventArgs e)
         {
-            if (player_cards.Count == 0)
+            // Check if game is valid to proceed
+            if (!isGameValidate()) return;
+
+            // Disable other buttons and enable Play button
+            if (hitButton.Enabled) toggleHitButton();
+            if (standButton.Enabled) toggleStandButton();
+            if (!playButton.Enabled) togglePlayButton();
+
+            // Check if game mode is Soft 17 or Hard 17
+            int stop;
+            if (softMode)
             {
-                MessageBox.Show("You have to play game first!!", "Error");
-                return;
+                stop = 18;
+            } else
+            {
+                stop = 17;
             }
 
-            // Draw until dealer's hand is > 17
-            while (dealerValue < 17)
+            // Draw until dealer's hand meets condition
+            while (dealerValue < stop)
             {
                 PictureBox pic_dealer = drawCardAndStore("dealerCard", ref dealer_cards);
 
@@ -134,14 +163,14 @@ namespace Project2
             int bet = (int.Parse(betMoney.Text));
 
             // Check Black Jack
-            if (checkBlackJack(player_cards) && checkBlackJack(dealer_cards))
+            if (isBlackJack(player_cards) && isBlackJack(dealer_cards))
             {
                 gameResult.Text = "DRAW!!";
-            } else if (checkBlackJack(player_cards) && !checkBlackJack(dealer_cards))
+            } else if (isBlackJack(player_cards) && !isBlackJack(dealer_cards))
             {
                 totalMoney.Text = (int.Parse(totalMoney.Text) + bet).ToString();
                 gameResult.Text = "You WIN!!";
-            } else if (!checkBlackJack(player_cards) && checkBlackJack(dealer_cards))
+            } else if (!isBlackJack(player_cards) && isBlackJack(dealer_cards))
             {
                 totalMoney.Text = (int.Parse(totalMoney.Text) - bet).ToString();
                 gameResult.Text = "You LOSE!!";
@@ -204,44 +233,22 @@ namespace Project2
 
         private PictureBox drawCardAndStore(String name, ref List<aCard> database)
         {
-            aCard newCard = deck.Draw();
+            aCard newCard = pileOfCards.Draw();
 
             int height_place;
             if (name == "playerCard")
             {
                 height_place = 170;
 
-                // Check if the drawn card is Ace
-                if (newCard.getValue() == 11)
-                {
-                    player_ace += 1;
-                }
-                playerValue += newCard.getValue();
-
-                // If total value is > 21 then Ace has value of 1
-                if (playerValue > 21 && player_ace > 0)
-                {
-                    player_ace -= 1;
-                    playerValue -= 10;
-                }
+                // Check if the drawn card is Ace and recalculate best value
+                checkAndRecalculateAce(newCard, ref playerValue, ref player_ace);
             }
             else
             {
                 height_place = 40;
 
-                // Check if the drawn card is Ace
-                if (newCard.getValue() == 11)
-                {
-                    dealer_ace += 1;
-                }
-                dealerValue += newCard.getValue();
-
-                // If total value is > 21 then Ace has value of 1
-                if (dealerValue > 21 && dealer_ace > 0)
-                {
-                    dealer_ace -= 1;
-                    dealerValue -= 10;
-                }
+                // Check if the drawn card is Ace and recalculate best value
+                checkAndRecalculateAce(newCard, ref dealerValue, ref dealer_ace);
             }
 
             PictureBox picture = new PictureBox
@@ -259,7 +266,24 @@ namespace Project2
             return picture;
         }
 
-        private bool checkBlackJack(List<aCard> cards)
+        private void checkAndRecalculateAce(aCard card, ref int currentVal, ref int numAces)
+        {
+            // Check if the drawn card is Ace
+            if (card.getValue() == 11)
+            {
+                numAces += 1;
+            }
+            currentVal += card.getValue();
+
+            // If total value is > 21 then Ace has value of 1
+            if (currentVal > 21 && numAces > 0)
+            {
+                numAces -= 1;
+                currentVal -= 10;
+            }
+        }
+
+        private bool isBlackJack(List<aCard> cards)
         {
             if (cards[0].getValue() + cards[1].getValue() == 21)
             {
@@ -268,6 +292,43 @@ namespace Project2
             {
                 return false;
             }
+        }
+
+        private bool isGameValidate()
+        {
+            // Check if player has started the game yet
+            if (player_cards.Count == 0)
+            {
+                MessageBox.Show("You have to play game first!!", "Error");
+                return false;
+            }
+
+            // Check if pile of cards is empty
+            if (pileOfCards.isEmptyDeck())
+            {
+                MessageBox.Show("Can't draw, deck is empty!!", "Error");
+                return false;
+            }
+
+            return true;
+        }
+
+        private void toggleStandButton()
+        {
+            if (standButton.Enabled) standButton.Enabled = false;
+            else standButton.Enabled = true;
+        }
+
+        private void toggleHitButton()
+        {
+            if (hitButton.Enabled) hitButton.Enabled = false;
+            else hitButton.Enabled = true;
+        }
+
+        private void togglePlayButton()
+        {
+            if (playButton.Enabled) playButton.Enabled = false;
+            else playButton.Enabled = true;
         }
     }
 }

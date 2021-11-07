@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Project2
 {
-    public class aDeckofCards : IDrawCard
+    public class aDeckofCards
     {
         private readonly List<aCard> deck = new List<aCard>();
          
@@ -19,16 +19,9 @@ namespace Project2
             }
         }
 
-        public aCard Draw()
+        public List<aCard> getDeck()
         {
-            Random random = new Random();
-
-            int val = random.Next(0, deck.Count);
-
-            aCard drawnCard = deck[val];
-            deck.RemoveAt(val);
-
-            return drawnCard;
+            return deck;
         }
 
         private Image chooseCard(String card)

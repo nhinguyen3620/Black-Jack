@@ -1,7 +1,7 @@
 ﻿
 namespace Project2
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -35,8 +35,7 @@ namespace Project2
             this.standButton = new System.Windows.Forms.Button();
             this.resetButton = new System.Windows.Forms.Button();
             this.playButton = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.seedVal = new System.Windows.Forms.TextBox();
+            this.seedLabel = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.totalMoney = new System.Windows.Forms.TextBox();
@@ -44,13 +43,12 @@ namespace Project2
             this.dealerVal = new System.Windows.Forms.TextBox();
             this.playerVal = new System.Windows.Forms.TextBox();
             this.result = new System.Windows.Forms.TextBox();
-            this.softMode = new System.Windows.Forms.CheckBox();
-            this.hardMode = new System.Windows.Forms.CheckBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.gameResult = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.numDeckLabel = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
@@ -121,23 +119,14 @@ namespace Project2
             this.playButton.UseVisualStyleBackColor = false;
             this.playButton.Click += new System.EventHandler(this.playButton_Click);
             // 
-            // label3
+            // seedLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(10, 188);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(124, 20);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Choose a seed: ";
-            // 
-            // seedVal
-            // 
-            this.seedVal.Location = new System.Drawing.Point(134, 188);
-            this.seedVal.Name = "seedVal";
-            this.seedVal.Size = new System.Drawing.Size(63, 20);
-            this.seedVal.TabIndex = 7;
-            this.seedVal.Text = "999";
+            this.seedLabel.AutoSize = true;
+            this.seedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.seedLabel.Location = new System.Drawing.Point(10, 188);
+            this.seedLabel.Name = "seedLabel";
+            this.seedLabel.Size = new System.Drawing.Size(0, 20);
+            this.seedLabel.TabIndex = 6;
             // 
             // label4
             // 
@@ -203,40 +192,6 @@ namespace Project2
             this.result.TabIndex = 26;
             this.result.Visible = false;
             // 
-            // softMode
-            // 
-            this.softMode.AutoSize = true;
-            this.softMode.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.softMode.Location = new System.Drawing.Point(20, 28);
-            this.softMode.Name = "softMode";
-            this.softMode.Size = new System.Drawing.Size(74, 22);
-            this.softMode.TabIndex = 27;
-            this.softMode.Text = "Soft 17";
-            this.softMode.UseVisualStyleBackColor = true;
-            // 
-            // hardMode
-            // 
-            this.hardMode.AutoSize = true;
-            this.hardMode.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hardMode.Location = new System.Drawing.Point(20, 63);
-            this.hardMode.Name = "hardMode";
-            this.hardMode.Size = new System.Drawing.Size(79, 22);
-            this.hardMode.TabIndex = 28;
-            this.hardMode.Text = "Hard 17";
-            this.hardMode.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.softMode);
-            this.groupBox1.Controls.Add(this.hardMode);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(35, 49);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(144, 87);
-            this.groupBox1.TabIndex = 29;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Mode";
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dealerVal);
@@ -273,19 +228,46 @@ namespace Project2
             this.gameResult.Text = "label6";
             this.gameResult.Visible = false;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(164, 241);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(0, 13);
+            this.label6.TabIndex = 33;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(377, 241);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(0, 20);
+            this.label7.TabIndex = 34;
+            // 
+            // numDeckLabel
+            // 
+            this.numDeckLabel.AutoSize = true;
+            this.numDeckLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numDeckLabel.Location = new System.Drawing.Point(12, 241);
+            this.numDeckLabel.Name = "numDeckLabel";
+            this.numDeckLabel.Size = new System.Drawing.Size(0, 20);
+            this.numDeckLabel.TabIndex = 35;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.ForestGreen;
             this.ClientSize = new System.Drawing.Size(878, 502);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.numDeckLabel);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.gameResult);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.result);
-            this.Controls.Add(this.seedVal);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.seedLabel);
             this.Controls.Add(this.playButton);
             this.Controls.Add(this.resetButton);
             this.Controls.Add(this.standButton);
@@ -294,8 +276,6 @@ namespace Project2
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -313,8 +293,7 @@ namespace Project2
         private System.Windows.Forms.Button standButton;
         private System.Windows.Forms.Button resetButton;
         private System.Windows.Forms.Button playButton;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox seedVal;
+        private System.Windows.Forms.Label seedLabel;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox totalMoney;
@@ -322,12 +301,12 @@ namespace Project2
         private System.Windows.Forms.TextBox dealerVal;
         private System.Windows.Forms.TextBox playerVal;
         private System.Windows.Forms.TextBox result;
-        private System.Windows.Forms.CheckBox softMode;
-        private System.Windows.Forms.CheckBox hardMode;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label gameResult;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label numDeckLabel;
     }
 }
 
