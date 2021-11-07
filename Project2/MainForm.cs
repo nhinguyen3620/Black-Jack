@@ -46,6 +46,8 @@ namespace Project2
             betMoney.Text = string.Empty;
 
             resetCards(sender, e);
+
+            if (!playButton.Enabled) togglePlayButton();
         }
 
         private void playButton_Click(object sender, EventArgs e)
@@ -58,7 +60,11 @@ namespace Project2
             }
 
             // Check if the user's total is less than bet money
-            if (int.Parse(totalMoney.Text) < int.Parse(betMoney.Text))
+            if (int.Parse(totalMoney.Text) == 0)
+            {
+                MessageBox.Show("You ran out of money!", "Invalid");
+                return;
+            } else if (int.Parse(totalMoney.Text) < int.Parse(betMoney.Text))
             {
                 MessageBox.Show("Please enter bet amount equal or less than your total!", "Invalid");
                 return;

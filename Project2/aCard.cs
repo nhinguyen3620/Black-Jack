@@ -5,7 +5,7 @@ namespace Project2
 {
     public class aCard
     {
-        public enum ValueType:int { Ace, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Jack, Queen, King, None }
+        public enum ValueType { Ace, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Jack, Queen, King, None }
         public enum FaceType { Spades=1, Clubs=2, Diamonds=3, Hearts=4, None=-1 }
 
         private readonly ValueType value;
