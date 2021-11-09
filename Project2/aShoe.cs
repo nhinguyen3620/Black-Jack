@@ -8,9 +8,12 @@ namespace Project2
     {
         private readonly int numOfDecks;
         private List<aCard> shoe = new List<aCard>();
+        private Random random;
 
-        public aShoe(int numOfDecks = 1, int seedValue = 999)
+        public aShoe(Random random, int numOfDecks = 1, int seedValue = 999)
         {
+            this.random = random;
+
             this.numOfDecks = numOfDecks;
             for (int i = 0; i < numOfDecks; i++)
             {
@@ -27,7 +30,6 @@ namespace Project2
 
         public aCard Draw()
         {
-            Random random = new Random();
             int val = random.Next(0, shoe.Count);
 
             aCard drawnCard = shoe[val];

@@ -7,6 +7,8 @@ namespace Project2
 {
     public partial class MainForm : Form
     {
+        private Random rand;
+
         private aShoe pileOfCards;
         private List<aCard> dealer_cards = new List<aCard>();
         private List<aCard> player_cards = new List<aCard>();
@@ -38,16 +40,18 @@ namespace Project2
             dealerVal.Enabled = false;
             playerVal.Enabled = false;
             totalMoney.Enabled = false;
+
+            rand = new Random(seedValue);
         }
 
         private void resetButton_Click(object sender, EventArgs e)
         {
-            totalMoney.Text = "100";
             betMoney.Text = string.Empty;
 
             resetCards(sender, e);
 
             if (!playButton.Enabled) togglePlayButton();
+            if (!betMoney.Enabled) toggleBetValue();
         }
 
         private void playButton_Click(object sender, EventArgs e)
@@ -71,7 +75,7 @@ namespace Project2
             }
 
             // Shuffle number of decks into a pile
-            pileOfCards = new aShoe(numOfDecks, seedValue);
+            pileOfCards = new aShoe(rand, numOfDecks, seedValue);
 
 
             // Reset previous game
@@ -80,6 +84,7 @@ namespace Project2
             if (!hitButton.Enabled) toggleHitButton();
             if (!standButton.Enabled) toggleStandButton();
             if (playButton.Enabled) togglePlayButton();
+            if (betMoney.Enabled) toggleBetValue();
 
             // Draw 2 cards for each player and display
             for (int i = 0; i < 2; i++)
@@ -111,7 +116,7 @@ namespace Project2
             if (isBlackJack(player_cards))
             {
                 MessageBox.Show("You are already Natural Black Jack", "Error");
-                return;
+                standButton_Click(sender, e);
             }
 
 
@@ -127,12 +132,15 @@ namespace Project2
             } else if (playerValue > 21)
             {
                 MessageBox.Show("You are busted", "Error");
+                standButton_Click(sender, e);
             } else if (playerValue == 21)
             {
                 MessageBox.Show("You got 21 already", "Error");
+                standButton_Click(sender, e);
             } else
             {
                 MessageBox.Show("You can't draw more cards", "Error");
+                standButton_Click(sender, e);
             }
         }
 
@@ -141,10 +149,11 @@ namespace Project2
             // Check if game is valid to proceed
             if (!isGameValidate()) return;
 
-            // Disable other buttons and enable Play button
+            // Disable other buttons and enable Play button & Bet textbox
             if (hitButton.Enabled) toggleHitButton();
             if (standButton.Enabled) toggleStandButton();
             if (!playButton.Enabled) togglePlayButton();
+            if (!betMoney.Enabled) toggleBetValue();
 
             // Check if game mode is Soft 17 or Hard 17
             int stop;
@@ -174,7 +183,7 @@ namespace Project2
                 gameResult.Text = "DRAW!!";
             } else if (isBlackJack(player_cards) && !isBlackJack(dealer_cards))
             {
-                totalMoney.Text = (int.Parse(totalMoney.Text) + bet).ToString();
+                totalMoney.Text = (int.Parse(totalMoney.Text) + bet * 3 / 2).ToString();
                 gameResult.Text = "You WIN!!";
             } else if (!isBlackJack(player_cards) && isBlackJack(dealer_cards))
             {
@@ -335,6 +344,12 @@ namespace Project2
         {
             if (playButton.Enabled) playButton.Enabled = false;
             else playButton.Enabled = true;
+        }
+
+        private void toggleBetValue()
+        {
+            if (betMoney.Enabled) betMoney.Enabled = false;
+            else betMoney.Enabled = true;
         }
     }
 }
