@@ -10,9 +10,9 @@ namespace Project2
         private List<aCard> shoe = new List<aCard>();
         private Random random;
 
-        public aShoe(Random random, int numOfDecks = 1, int seedValue = 999)
+        public aShoe(Random rand, int numOfDecks = 1)
         {
-            this.random = random;
+            this.random = rand;
 
             this.numOfDecks = numOfDecks;
             for (int i = 0; i < numOfDecks; i++)

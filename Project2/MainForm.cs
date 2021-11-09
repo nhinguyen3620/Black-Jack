@@ -7,7 +7,7 @@ namespace Project2
 {
     public partial class MainForm : Form
     {
-        private Random rand;
+        private Random random;
 
         private aShoe pileOfCards;
         private List<aCard> dealer_cards = new List<aCard>();
@@ -41,7 +41,7 @@ namespace Project2
             playerVal.Enabled = false;
             totalMoney.Enabled = false;
 
-            rand = new Random(seedValue);
+            random = new Random(seedValue);
         }
 
         private void resetButton_Click(object sender, EventArgs e)
@@ -75,7 +75,7 @@ namespace Project2
             }
 
             // Shuffle number of decks into a pile
-            pileOfCards = new aShoe(rand, numOfDecks, seedValue);
+            pileOfCards = new aShoe(random, numOfDecks);
 
 
             // Reset previous game
