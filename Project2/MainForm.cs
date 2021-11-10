@@ -96,9 +96,11 @@ namespace Project2
                 return;
             }
 
-            // Shuffle number of decks into a pile
-            pileOfCards = new aShoe(aRandomVariable.rand, numOfDecks);
-
+            // Shuffle number of decks into a pile if the rest of cards < 3/4 total
+            if (pileOfCards.countNumOfCards() < numOfDecks * 52 * 1/4)
+            {
+                pileOfCards = new aShoe(aRandomVariable.rand, numOfDecks);
+            }
 
             // Reset previous game
             resetCards(sender, e);

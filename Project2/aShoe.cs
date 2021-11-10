@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Windows.Forms;
 using Project_1;
 
 namespace Project2
@@ -22,6 +21,11 @@ namespace Project2
 
                 shoe.AddRange(newDeck.getDeck());
             }
+        }
+
+        public int countNumOfCards()
+        {
+            return shoe.Count;
         }
 
         public bool isEmptyDeck()
