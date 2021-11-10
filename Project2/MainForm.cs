@@ -98,7 +98,7 @@ namespace Project2
             }
 
             // Shuffle number of decks into a pile if the rest of cards < 3/4 total
-            if (pileOfCards.countNumOfCards() < numOfDecks * 52 * 1/4)
+            if (pileOfCards == null || pileOfCards.countNumOfCards() < numOfDecks * 52 * 1/4)
             {
                 pileOfCards = new aShoe(aRandomVariable.rand, numOfDecks);
             }
