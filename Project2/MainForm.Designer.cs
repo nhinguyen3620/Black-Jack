@@ -62,20 +62,21 @@ namespace Project2
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Yu Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Yu Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(436, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 25);
+            this.label1.Size = new System.Drawing.Size(72, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Dealer";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Yu Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Yu Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(439, 149);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 25);
+            this.label2.Size = new System.Drawing.Size(69, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Player";
             // 
@@ -137,41 +138,45 @@ namespace Project2
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(14, 23);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 21);
+            this.label4.Size = new System.Drawing.Size(79, 25);
             this.label4.TabIndex = 8;
             this.label4.Text = "Total ($)";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(17, 63);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 21);
+            this.label5.Size = new System.Drawing.Size(66, 25);
             this.label5.TabIndex = 9;
             this.label5.Text = "Bet ($)";
             // 
             // totalMoney
             // 
+            this.totalMoney.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalMoney.Location = new System.Drawing.Point(100, 25);
+            this.totalMoney.MinimumSize = new System.Drawing.Size(20, 20);
             this.totalMoney.Name = "totalMoney";
             this.totalMoney.ReadOnly = true;
-            this.totalMoney.Size = new System.Drawing.Size(100, 20);
+            this.totalMoney.Size = new System.Drawing.Size(100, 26);
             this.totalMoney.TabIndex = 10;
             this.totalMoney.Text = "100";
             // 
             // betMoney
             // 
-            this.betMoney.Location = new System.Drawing.Point(100, 65);
+            this.betMoney.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.betMoney.Location = new System.Drawing.Point(100, 69);
             this.betMoney.Name = "betMoney";
-            this.betMoney.Size = new System.Drawing.Size(100, 20);
+            this.betMoney.Size = new System.Drawing.Size(100, 26);
             this.betMoney.TabIndex = 11;
             // 
             // dealerVal
             // 
+            this.dealerVal.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dealerVal.Location = new System.Drawing.Point(13, 32);
             this.dealerVal.MinimumSize = new System.Drawing.Size(20, 55);
             this.dealerVal.Name = "dealerVal";
@@ -181,6 +186,7 @@ namespace Project2
             // 
             // playerVal
             // 
+            this.playerVal.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playerVal.Location = new System.Drawing.Point(13, 126);
             this.playerVal.MinimumSize = new System.Drawing.Size(20, 55);
             this.playerVal.Name = "playerVal";
@@ -203,7 +209,7 @@ namespace Project2
             this.groupBox2.Controls.Add(this.dealerVal);
             this.groupBox2.Controls.Add(this.playerVal);
             this.groupBox2.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(705, 31);
+            this.groupBox2.Location = new System.Drawing.Point(706, 25);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(144, 195);
             this.groupBox2.TabIndex = 30;
@@ -216,9 +222,9 @@ namespace Project2
             this.groupBox3.Controls.Add(this.totalMoney);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.betMoney);
-            this.groupBox3.Location = new System.Drawing.Point(14, 336);
+            this.groupBox3.Location = new System.Drawing.Point(14, 317);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(226, 108);
+            this.groupBox3.Size = new System.Drawing.Size(253, 119);
             this.groupBox3.TabIndex = 31;
             this.groupBox3.TabStop = false;
             // 
@@ -226,6 +232,7 @@ namespace Project2
             // 
             this.gameResult.AutoSize = true;
             this.gameResult.Font = new System.Drawing.Font("Yu Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gameResult.ForeColor = System.Drawing.Color.Maroon;
             this.gameResult.Location = new System.Drawing.Point(373, 399);
             this.gameResult.MinimumSize = new System.Drawing.Size(200, 100);
             this.gameResult.Name = "gameResult";
