@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Drawing;
-
+using Project_1;
 
 namespace Project2
 {
@@ -11,7 +11,6 @@ namespace Project2
     /// </summary>
     public partial class MainForm : Form
     {
-        private Random random;
 
         private aShoe pileOfCards;
         private List<aCard> dealer_cards = new List<aCard>();
@@ -51,7 +50,7 @@ namespace Project2
             seedV.Text = seedValue.ToString();
             gameMode.Text = softMode ? "Soft Mode" : "Hard Mode";
 
-            random = new Random(seedValue);
+            aRandomVariable.rand = new Random(seedValue);
         }
 
         /// <summary>
@@ -67,6 +66,8 @@ namespace Project2
 
             if (!playButton.Enabled) togglePlayButton();
             if (!betMoney.Enabled) toggleBetValue();
+            gameResult.Visible = false;
+
         }
 
         /// <summary>
@@ -96,7 +97,7 @@ namespace Project2
             }
 
             // Shuffle number of decks into a pile
-            pileOfCards = new aShoe(random, numOfDecks);
+            pileOfCards = new aShoe(aRandomVariable.rand, numOfDecks);
 
 
             // Reset previous game
@@ -144,6 +145,7 @@ namespace Project2
             {
                 MessageBox.Show("You are already Natural Black Jack", "Error");
                 standButton_Click(sender, e);
+                return;
             }
 
 
@@ -160,14 +162,17 @@ namespace Project2
             {
                 MessageBox.Show("You are busted", "Error");
                 standButton_Click(sender, e);
+                return;
             } else if (playerValue == 21)
             {
                 MessageBox.Show("You got 21 already", "Error");
                 standButton_Click(sender, e);
+                return;
             } else
             {
                 MessageBox.Show("You can't draw more cards", "Error");
                 standButton_Click(sender, e);
+                return;
             }
         }
 
@@ -282,6 +287,7 @@ namespace Project2
             dealerValue = 0;
             dealerVal.Text = string.Empty;
             dealer_ace = 0;
+
         }
 
         /// <summary>
@@ -297,7 +303,7 @@ namespace Project2
             int height_place;
             if (name == "playerCard")
             {
-                height_place = 170;
+                height_place = 175;
 
                 // Check if the drawn card is Ace and recalculate best value
                 checkAndRecalculateAce(newCard, ref playerValue, ref player_ace);

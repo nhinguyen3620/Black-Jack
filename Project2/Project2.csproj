@@ -148,5 +148,11 @@
     <Content Include="Cards\Q_Sp.png" />
     <None Include="Resources\10_Club.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\Desktop\NhiNguyenProject 1\Project 1\Project 1\Project 1.csproj">
+      <Project>{7f8ec141-f81c-4ea2-8e18-53da3fe0b63a}</Project>
+      <Name>Project 1</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

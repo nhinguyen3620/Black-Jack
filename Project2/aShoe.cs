@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using Project_1;
 
 namespace Project2
 {
-    public class aShoe : IDrawCard
+    public class aShoe : aRandomVariable, IDrawCard
     {
         private readonly int numOfDecks;
         private List<aCard> shoe = new List<aCard>();
