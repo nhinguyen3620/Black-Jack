@@ -82,47 +82,49 @@ namespace Project2
             // 
             // hitButton
             // 
-            this.hitButton.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hitButton.Location = new System.Drawing.Point(464, 296);
+            this.hitButton.BackColor = System.Drawing.Color.DarkGreen;
+            this.hitButton.Font = new System.Drawing.Font("Yu Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hitButton.Location = new System.Drawing.Point(465, 296);
             this.hitButton.Name = "hitButton";
-            this.hitButton.Size = new System.Drawing.Size(91, 34);
+            this.hitButton.Size = new System.Drawing.Size(96, 40);
             this.hitButton.TabIndex = 2;
             this.hitButton.Text = "Hit";
-            this.hitButton.UseVisualStyleBackColor = true;
+            this.hitButton.UseVisualStyleBackColor = false;
             this.hitButton.Click += new System.EventHandler(this.hitButton_Click);
             // 
             // standButton
             // 
-            this.standButton.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.standButton.BackColor = System.Drawing.Color.DarkRed;
+            this.standButton.Font = new System.Drawing.Font("Yu Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.standButton.Location = new System.Drawing.Point(353, 296);
             this.standButton.Name = "standButton";
-            this.standButton.Size = new System.Drawing.Size(91, 34);
+            this.standButton.Size = new System.Drawing.Size(96, 40);
             this.standButton.TabIndex = 3;
             this.standButton.Text = "Stand";
-            this.standButton.UseVisualStyleBackColor = true;
+            this.standButton.UseVisualStyleBackColor = false;
             this.standButton.Click += new System.EventHandler(this.standButton_Click);
             // 
             // resetButton
             // 
             this.resetButton.BackColor = System.Drawing.Color.Firebrick;
-            this.resetButton.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resetButton.Font = new System.Drawing.Font("Yu Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resetButton.Location = new System.Drawing.Point(671, 390);
             this.resetButton.Name = "resetButton";
             this.resetButton.Size = new System.Drawing.Size(109, 38);
             this.resetButton.TabIndex = 4;
-            this.resetButton.Text = "Reset";
+            this.resetButton.Text = "RESET";
             this.resetButton.UseVisualStyleBackColor = false;
             this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
             // 
             // playButton
             // 
             this.playButton.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.playButton.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playButton.Font = new System.Drawing.Font("Yu Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playButton.Location = new System.Drawing.Point(671, 317);
             this.playButton.Name = "playButton";
             this.playButton.Size = new System.Drawing.Size(109, 40);
             this.playButton.TabIndex = 5;
-            this.playButton.Text = "Play";
+            this.playButton.Text = "PLAY";
             this.playButton.UseVisualStyleBackColor = false;
             this.playButton.Click += new System.EventHandler(this.playButton_Click);
             // 
@@ -231,12 +233,13 @@ namespace Project2
             // gameResult
             // 
             this.gameResult.AutoSize = true;
+            this.gameResult.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.gameResult.Font = new System.Drawing.Font("Yu Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gameResult.ForeColor = System.Drawing.Color.Maroon;
-            this.gameResult.Location = new System.Drawing.Point(373, 399);
-            this.gameResult.MinimumSize = new System.Drawing.Size(200, 100);
+            this.gameResult.Location = new System.Drawing.Point(353, 423);
+            this.gameResult.MinimumSize = new System.Drawing.Size(202, 50);
             this.gameResult.Name = "gameResult";
-            this.gameResult.Size = new System.Drawing.Size(200, 100);
+            this.gameResult.Size = new System.Drawing.Size(202, 50);
             this.gameResult.TabIndex = 32;
             this.gameResult.Text = "label6";
             this.gameResult.Visible = false;
@@ -328,7 +331,7 @@ namespace Project2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.ForestGreen;
+            this.BackColor = System.Drawing.Color.OliveDrab;
             this.ClientSize = new System.Drawing.Size(878, 502);
             this.Controls.Add(this.gameMode);
             this.Controls.Add(this.seedV);
