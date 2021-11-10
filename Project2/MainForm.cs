@@ -216,9 +216,9 @@ namespace Project2
             int bet = (int.Parse(betMoney.Text));
 
             // Check Black Jack
-            if (isBlackJack(player_cards) && isBlackJack(dealer_cards))
+            if (isBlackJack(player_cards))
             {
-                gameResult.Text = "DRAW!!";
+                gameResult.Text = "You WIN!!";
             } else if (isBlackJack(player_cards) && !isBlackJack(dealer_cards))
             {
                 totalMoney.Text = (int.Parse(totalMoney.Text) + bet * 3 / 2).ToString();
