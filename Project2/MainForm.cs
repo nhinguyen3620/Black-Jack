@@ -3,8 +3,12 @@ using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Drawing;
 
+
 namespace Project2
 {
+    /// <summary>
+    /// This function holds data members of MainForm class
+    /// </summary>
     public partial class MainForm : Form
     {
         private Random random;
@@ -26,7 +30,9 @@ namespace Project2
         private int seedValue;
         private bool softMode;
 
-
+        /// <summary>
+        /// This function initializes the Main Form
+        /// </summary>
         public MainForm()
         {
             InitializeComponent();
@@ -41,9 +47,18 @@ namespace Project2
             playerVal.Enabled = false;
             totalMoney.Enabled = false;
 
+            numDeck.Text = numOfDecks.ToString();
+            seedV.Text = seedValue.ToString();
+            gameMode.Text = softMode ? "Soft Mode" : "Hard Mode";
+
             random = new Random(seedValue);
         }
 
+        /// <summary>
+        /// This function will be called when user clicks the Reset button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void resetButton_Click(object sender, EventArgs e)
         {
             betMoney.Text = string.Empty;
@@ -54,6 +69,12 @@ namespace Project2
             if (!betMoney.Enabled) toggleBetValue();
         }
 
+        /// <summary>
+        /// This function will be called when user clicks the Play button
+        /// </summary>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void playButton_Click(object sender, EventArgs e)
         {
             // Check if the user bet yet
@@ -107,6 +128,12 @@ namespace Project2
 
         }
 
+        /// <summary>
+        /// This function will be called when user clicks the Hit button
+        /// </summary>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void hitButton_Click(object sender, EventArgs e)
         {
             // Check if game is valid to proceed
@@ -144,6 +171,12 @@ namespace Project2
             }
         }
 
+        /// <summary>
+        /// This function will be called when user clicks the Stand button
+        /// </summary>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void standButton_Click(object sender, EventArgs e)
         {
             // Check if game is valid to proceed
@@ -221,6 +254,11 @@ namespace Project2
             gameResult.Visible = true;
         }
 
+        /// <summary>
+        /// This function resets some of the table properties when user click the Reset button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void resetCards(object sender, EventArgs e)
         {
             foreach (aCard card_player in player_cards)
@@ -246,6 +284,12 @@ namespace Project2
             dealer_ace = 0;
         }
 
+        /// <summary>
+        /// this function helps drawing and storing the cards
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="database"></param>
+        /// <returns></returns>
         private PictureBox drawCardAndStore(String name, ref List<aCard> database)
         {
             aCard newCard = pileOfCards.Draw();
@@ -281,6 +325,12 @@ namespace Project2
             return picture;
         }
 
+        /// <summary>
+        /// This function decides the value of Ace card based on the total value of current cards
+        /// </summary>
+        /// <param name="card"></param>
+        /// <param name="currentVal"></param>
+        /// <param name="numAces"></param>
         private void checkAndRecalculateAce(aCard card, ref int currentVal, ref int numAces)
         {
             // Check if the drawn card is Ace
@@ -298,6 +348,11 @@ namespace Project2
             }
         }
 
+        /// <summary>
+        /// This function checks if the first 2 cards are Black Jack
+        /// </summary>
+        /// <param name="cards"></param>
+        /// <returns></returns>
         private bool isBlackJack(List<aCard> cards)
         {
             if (cards[0].getValue() + cards[1].getValue() == 21)
@@ -309,6 +364,10 @@ namespace Project2
             }
         }
 
+        /// <summary>
+        /// This function check if all the requirements are met before starting the game
+        /// </summary>
+        /// <returns></returns>
         private bool isGameValidate()
         {
             // Check if player has started the game yet
@@ -328,24 +387,36 @@ namespace Project2
             return true;
         }
 
+        /// <summary>
+        /// This function toggles the Stand button
+        /// </summary>
         private void toggleStandButton()
         {
             if (standButton.Enabled) standButton.Enabled = false;
             else standButton.Enabled = true;
         }
 
+        /// <summary>
+        /// This function toggles the Hit button
+        /// </summary>
         private void toggleHitButton()
         {
             if (hitButton.Enabled) hitButton.Enabled = false;
             else hitButton.Enabled = true;
         }
 
+        /// <summary>
+        /// This function toggles the Play button
+        /// </summary>
         private void togglePlayButton()
         {
             if (playButton.Enabled) playButton.Enabled = false;
             else playButton.Enabled = true;
         }
 
+        /// <summary>
+        /// This function toggle the ability to bet value
+        /// </summary>
         private void toggleBetValue()
         {
             if (betMoney.Enabled) betMoney.Enabled = false;

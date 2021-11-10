@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace Project2
 {
+    /// <summary>
+    /// This function holds the data member of MenuForm class
+    /// </summary>
     public partial class MenuForm : Form
     {
         public static int seedValue;
@@ -17,12 +20,20 @@ namespace Project2
         public static bool softModeButton = true;
         public static bool hardModeButton = false;
 
+        /// <summary>
+        /// This function initializes the MenuForm class
+        /// </summary>
         public MenuForm()
         {
             InitializeComponent();
             softMode.Checked = true;
         }
 
+        /// <summary>
+        /// This function will be called when user clicks the Play button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             // Check if the user choose number of decks yet
@@ -50,6 +61,11 @@ namespace Project2
             newPlayer.Show();
         }
 
+        /// <summary>
+        /// This function ensures that user can only choose one mode
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void softMode_CheckedChanged(object sender, EventArgs e)
         {
             if (softMode.Checked)
@@ -67,6 +83,11 @@ namespace Project2
             }
         }
 
+        /// <summary>
+        /// This function ensures that user can only choose one mode
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void hardMode_CheckedChanged(object sender, EventArgs e)
         {
             if (hardMode.Checked)

@@ -49,6 +49,12 @@ namespace Project2
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.numDeckLabel = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.numDeck = new System.Windows.Forms.Label();
+            this.seedV = new System.Windows.Forms.Label();
+            this.gameMode = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
@@ -56,26 +62,26 @@ namespace Project2
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Yu Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(436, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 20);
+            this.label1.Size = new System.Drawing.Size(71, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Dealer";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(435, 145);
+            this.label2.Font = new System.Drawing.Font("Yu Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(439, 157);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 20);
+            this.label2.Size = new System.Drawing.Size(68, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Player";
             // 
             // hitButton
             // 
-            this.hitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hitButton.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hitButton.Location = new System.Drawing.Point(464, 296);
             this.hitButton.Name = "hitButton";
             this.hitButton.Size = new System.Drawing.Size(91, 34);
@@ -86,7 +92,7 @@ namespace Project2
             // 
             // standButton
             // 
-            this.standButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.standButton.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.standButton.Location = new System.Drawing.Point(353, 296);
             this.standButton.Name = "standButton";
             this.standButton.Size = new System.Drawing.Size(91, 34);
@@ -98,7 +104,7 @@ namespace Project2
             // resetButton
             // 
             this.resetButton.BackColor = System.Drawing.Color.Firebrick;
-            this.resetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resetButton.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resetButton.Location = new System.Drawing.Point(671, 390);
             this.resetButton.Name = "resetButton";
             this.resetButton.Size = new System.Drawing.Size(109, 38);
@@ -109,8 +115,8 @@ namespace Project2
             // 
             // playButton
             // 
-            this.playButton.BackColor = System.Drawing.Color.Ivory;
-            this.playButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playButton.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.playButton.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playButton.Location = new System.Drawing.Point(671, 317);
             this.playButton.Name = "playButton";
             this.playButton.Size = new System.Drawing.Size(109, 40);
@@ -131,20 +137,20 @@ namespace Project2
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(14, 23);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 20);
+            this.label4.Size = new System.Drawing.Size(65, 21);
             this.label4.TabIndex = 8;
             this.label4.Text = "Total ($)";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(17, 63);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 20);
+            this.label5.Size = new System.Drawing.Size(55, 21);
             this.label5.TabIndex = 9;
             this.label5.Text = "Bet ($)";
             // 
@@ -170,7 +176,7 @@ namespace Project2
             this.dealerVal.MinimumSize = new System.Drawing.Size(20, 55);
             this.dealerVal.Name = "dealerVal";
             this.dealerVal.ReadOnly = true;
-            this.dealerVal.Size = new System.Drawing.Size(108, 29);
+            this.dealerVal.Size = new System.Drawing.Size(108, 55);
             this.dealerVal.TabIndex = 23;
             // 
             // playerVal
@@ -179,7 +185,7 @@ namespace Project2
             this.playerVal.MinimumSize = new System.Drawing.Size(20, 55);
             this.playerVal.Name = "playerVal";
             this.playerVal.ReadOnly = true;
-            this.playerVal.Size = new System.Drawing.Size(108, 29);
+            this.playerVal.Size = new System.Drawing.Size(108, 55);
             this.playerVal.TabIndex = 24;
             // 
             // result
@@ -196,7 +202,7 @@ namespace Project2
             // 
             this.groupBox2.Controls.Add(this.dealerVal);
             this.groupBox2.Controls.Add(this.playerVal);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(705, 31);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(144, 195);
@@ -219,8 +225,8 @@ namespace Project2
             // gameResult
             // 
             this.gameResult.AutoSize = true;
-            this.gameResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gameResult.Location = new System.Drawing.Point(355, 401);
+            this.gameResult.Font = new System.Drawing.Font("Yu Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gameResult.Location = new System.Drawing.Point(373, 399);
             this.gameResult.MinimumSize = new System.Drawing.Size(200, 100);
             this.gameResult.Name = "gameResult";
             this.gameResult.Size = new System.Drawing.Size(200, 100);
@@ -254,12 +260,75 @@ namespace Project2
             this.numDeckLabel.Size = new System.Drawing.Size(0, 20);
             this.numDeckLabel.TabIndex = 35;
             // 
-            // Form1
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 49);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(138, 21);
+            this.label3.TabIndex = 36;
+            this.label3.Text = "Number of Decks: ";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(12, 95);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(89, 21);
+            this.label8.TabIndex = 37;
+            this.label8.Text = "Seed Value:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(12, 142);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(98, 21);
+            this.label9.TabIndex = 38;
+            this.label9.Text = "Game Mode:";
+            // 
+            // numDeck
+            // 
+            this.numDeck.AutoSize = true;
+            this.numDeck.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numDeck.Location = new System.Drawing.Point(157, 49);
+            this.numDeck.Name = "numDeck";
+            this.numDeck.Size = new System.Drawing.Size(0, 21);
+            this.numDeck.TabIndex = 39;
+            // 
+            // seedV
+            // 
+            this.seedV.AutoSize = true;
+            this.seedV.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.seedV.Location = new System.Drawing.Point(157, 95);
+            this.seedV.Name = "seedV";
+            this.seedV.Size = new System.Drawing.Size(0, 21);
+            this.seedV.TabIndex = 40;
+            // 
+            // gameMode
+            // 
+            this.gameMode.AutoSize = true;
+            this.gameMode.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gameMode.Location = new System.Drawing.Point(157, 142);
+            this.gameMode.Name = "gameMode";
+            this.gameMode.Size = new System.Drawing.Size(0, 21);
+            this.gameMode.TabIndex = 41;
+            // 
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.ForestGreen;
             this.ClientSize = new System.Drawing.Size(878, 502);
+            this.Controls.Add(this.gameMode);
+            this.Controls.Add(this.seedV);
+            this.Controls.Add(this.numDeck);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.numDeckLabel);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -274,7 +343,7 @@ namespace Project2
             this.Controls.Add(this.hitButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "Form1";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -307,6 +376,12 @@ namespace Project2
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label numDeckLabel;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label numDeck;
+        private System.Windows.Forms.Label seedV;
+        private System.Windows.Forms.Label gameMode;
     }
 }
 
