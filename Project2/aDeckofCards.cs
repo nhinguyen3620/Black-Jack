@@ -4,10 +4,16 @@ using System.Collections.Generic;
 
 namespace Project2
 {
+    /// <summary>
+    /// aDeckofCards class
+    /// </summary>
     public class aDeckofCards
     {
         private readonly List<aCard> deck = new List<aCard>();
          
+        /// <summary>
+        /// default constructor
+        /// </summary>
         public aDeckofCards()
         {
             for (int i = 0; i < 52; i++)
@@ -19,11 +25,20 @@ namespace Project2
             }
         }
 
+        /// <summary>
+        /// get Deck method
+        /// </summary>
+        /// <returns></returns>
         public List<aCard> getDeck()
         {
             return deck;
         }
 
+        /// <summary>
+        /// method to choose card
+        /// </summary>
+        /// <param name="card"></param>
+        /// <returns></returns>
         private Image chooseCard(String card)
         {
             switch (card)

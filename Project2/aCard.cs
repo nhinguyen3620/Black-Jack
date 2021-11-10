@@ -3,8 +3,12 @@ using System.Windows.Forms;
 
 namespace Project2
 {
+    /// <summary>
+    /// aCard class
+    /// </summary>
     public class aCard
     {
+        //create enum for Value and Face of cards
         public enum ValueType { Ace=11, Two=2, Three=3, Four=4, Five=5, Six=6, Seven=7, Eight=8, Nine=9, Ten=10, Jack=10, Queen=10, King=10, None=-1 }
         public enum FaceType { Spades=1, Clubs=2, Diamonds=3, Hearts=4, None=-1 }
 
@@ -13,6 +17,12 @@ namespace Project2
         private readonly Image picture;
         public PictureBox card_display = null;
 
+        /// <summary>
+        /// constructor
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="face"></param>
+        /// <param name="picture"></param>
         public aCard(ValueType value, FaceType face, System.Drawing.Image picture)
         {
             this.value = value;
@@ -20,16 +30,29 @@ namespace Project2
             this.picture = picture;
         }
 
+        /// <summary>
+        /// get picture method
+        /// </summary>
+        /// <returns></returns>
         public Image getPicture()
         {
             return this.picture;
         }
 
+        /// <summary>
+        /// get value method
+        /// </summary>
+        /// <returns></returns>
         public int getValue()
         {
             return (int)this.value;
         }
 
+        /// <summary>
+        /// return card value method
+        /// </summary>
+        /// <param name="val"></param>
+        /// <returns></returns>
         public static ValueType calcValue(int val)
         {
             switch (val)
@@ -66,6 +89,11 @@ namespace Project2
             }
         }
 
+        /// <summary>
+        /// return card face method
+        /// </summary>
+        /// <param name="val"></param>
+        /// <returns></returns>
         public static FaceType calcFace(int val)
         {
             switch (val)
