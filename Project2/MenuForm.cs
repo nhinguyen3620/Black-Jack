@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+//Group members: Nam Nguyen & Nhi Nguyen
 namespace Project2
 {
     /// <summary>

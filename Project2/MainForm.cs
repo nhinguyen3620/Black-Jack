@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using Project_1;
 
+//Group members: Nhi Nguyen & Nam Nguyen
 namespace Project2
 {
     /// <summary>
